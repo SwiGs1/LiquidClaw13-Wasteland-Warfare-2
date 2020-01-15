@@ -53,6 +53,7 @@
 /obj/item/reagent_containers/food/snacks/meat/steak/gecko
 	name = "gecko steak"
 	desc = "A delicious steak made of finest gecko meat.<br>Tastes like chicken!"
+	tastes = list("chicken" = 10)
 
 /obj/item/reagent_containers/food/snacks/meat/steak/molerat
 	name = "molerat steak"
@@ -87,6 +88,7 @@
 	icon_state = "bubblegum"
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
 	list_reagents = list("nutriment" = 2, "sugar" = 2)
+	tastes = list("rubber" = 4)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/bubblegum
 
@@ -96,6 +98,7 @@
 	icon_state = "bubblegum_large"
 	bonus_reagents = list("radium" = 4, "vitamin" = 2)
 	list_reagents = list("nutriment" = 4, "sugar" = 4)
+	tastes = list("rubber" = 4)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/bubblegum_large
 
@@ -105,6 +108,7 @@
 	icon_state = "cram"
 	bonus_reagents = list("radium" = 2, "vitamin" = 5)
 	list_reagents = list("nutriment" = 20)
+	tastes = list("slimey meat" = 20)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/cram
 
@@ -114,6 +118,7 @@
 	icon_state = "cram_large"
 	bonus_reagents = list("radium" = 2, "vitamin" = 10)
 	list_reagents = list("nutriment" = 40)
+	tastes = list("slimey meat" = 20)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/cram_large
 
@@ -123,6 +128,7 @@
 	icon_state = "yumyum"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10)
+	tastes = list("powdery eggs" = 10)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/yumyum
 
@@ -132,6 +138,7 @@
 	icon_state = "fancylads"
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
 	list_reagents = list("nutriment" = 20)
+	tastes = list("powdered sugar" = 5, "chocolate cake" = 8)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/fancylads
 
@@ -141,6 +148,7 @@
 	icon_state = "sugarbombs"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
+	tastes = list("sweetness" = 10, "sugar" = 6, "cereal" = 4)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/sugarbombs
 
@@ -150,6 +158,7 @@
 	icon_state = "crisps"
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
 	list_reagents = list("nutriment" = 5)
+	tastes = list("stale potato chips" = 10)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/crisps
 
@@ -159,6 +168,7 @@
 	icon_state = "steak"
 	bonus_reagents = list("radium" = 2, "vitamin" = 5)
 	list_reagents = list("nutriment" = 50)
+	tastes = list("meat" = 10, "gravy" = 10)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/steak
 
@@ -177,6 +187,7 @@
 	icon_state = "dandyapples"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
+	tastes = list("sweet apples" = 10)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/dandyapples
 
@@ -186,6 +197,7 @@
 	icon_state = "blamco"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 15)
+	tastes = list("dry macaroni" = 10, "cheese" = 10)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/blamco
 
@@ -195,6 +207,7 @@
 	icon_state = "blamco_large"
 	bonus_reagents = list("radium" = 4, "vitamin" = 4)
 	list_reagents = list("nutriment" = 30)
+	tastes = list("dry macaroni" = 10, "cheese" = 10)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/blamco_large
 
@@ -205,6 +218,7 @@
 	bonus_reagents = list("radium" = 2, "vitamin" = 3)
 	list_reagents = list("nutriment" = 15)
 	filling_color = "#B22222"
+	tastes = list("WD-40" = 6, "creamy potato" = 8)
 	trash = /obj/item/trash/f13/mechanist
 
 /obj/item/reagent_containers/food/snacks/f13/instamash
@@ -213,6 +227,7 @@
 	icon_state = "instamash"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 15)
+	tastes = list("creamy potato" = 10)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/instamash
 
@@ -222,6 +237,7 @@
 	icon_state = "porknbeans"
 	bonus_reagents = list("radium" = 1, "vitamin" = 2)
 	list_reagents = list("nutriment" = 35)
+	tastes = list("smokey pig fat" = 2, "pork" = 5, "beans" = 5)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/porknbeans
 
@@ -240,6 +256,7 @@
 	icon_state = "dog"
 	bonus_reagents = list("radium" = 1, "vitamin" = 3)
 	list_reagents = list("nutriment" = 35)
+	tastes = list("dog food" = 10)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/dog
 
@@ -258,6 +275,7 @@
 	icon_state = "galette"
 	bonus_reagents = list("sodiumchloride" = 2, "sugar" = 2, "tricordrazine" = 2)
 	list_reagents = list("nutriment" = 10)
+	tastes = list("vegetables" = 10, "salt" = 10)
 	filling_color = "#B22222"
 
 //WASTELAND EGGS
@@ -278,6 +296,7 @@
     icon_state = "baconcookedb"
     bonus_reagents = list("vitamin" = 5)
     list_reagents = list("nutriment" = 12)
+    tastes = list("something nutty" = 2, "molerat" = 10)
     filling_color = "#B22222"
 
 /obj/item/reagent_containers/food/snacks/f13/caravanlunch
@@ -293,6 +312,7 @@
     name = "Wasteland Wellington"
     desc = "Meat from wasteland critters wrapped in puffy pastry. Delicious, rich and certainly high class."
     icon_state = "meatbun"
+    tastes = list("meaty pastry" = 10)
     bonus_reagents = list("vitamin" = 5, "tricordrazine = 5")
     list_reagents = list("nutriment" = 30)
     filling_color = "B#22222"
@@ -311,6 +331,7 @@
    icon_state = "moleratstew"
    bonus_reagents = list("vitamin" = 5, "tricordrazine" = 5)
    list_reagents = list("nutriment" = 20)
+   tastes = list("bitter soup" = 10)
    filling_color = "B#22222"
 
 /obj/item/reagent_containers/food/snacks/f13/crispysquirrel

@@ -73,7 +73,7 @@
 	..()
 
 // armoured supermutant subtype, will later make more sprites for different armoured apparel - Swigs 
-/mob/living/simple_animal/hostile/armouredsupermutant
+/mob/living/simple_animal/hostile/supermutant/armouredsupermutant
 	name = "armoured super mutant"
 	desc = "A huge and ugly mutant humanoid except covered in armour."
 	icon = 'icons/fallout/mobs/supermutant.dmi'
@@ -102,7 +102,7 @@
 	attacktext = "smashes"
 	attack_sound = "punch"
 
-/mob/living/simple_animal/hostile/armouredsupermutant/bullet_act(obj/item/projectile/Proj)
+/mob/living/simple_animal/hostile/supermutant/armouredsupermutant/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
 	if(prob(85) || Proj.damage > 26)
@@ -111,7 +111,7 @@
 		visible_message("<span class='danger'>\The [Proj] is deflected harmlessly by \the [src]'s thick skin!</span>")
 		return FALSE
 
-/mob/living/simple_animal/hostile/armouredsupermutant/death(gibbed)
+/mob/living/simple_animal/hostile/supermutant/armouredsupermutant/death(gibbed)
 	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
 	icon_state = icon_dead
 	anchored = FALSE

@@ -45,14 +45,14 @@ Game Master		= +EVERYTHING *EVERYTHING
 Lazy Master 	= +EVERYTHING -AUTOLOGIN *EVERYTHING
 Three Dog		= -@ -ADMIN +DJ
 
-Scribe 			= +SERVER +DEBUG +VAREDIT +SPAWN -AUTOLOGIN
-Head Scribe 	= +@ +POLL -AUTOLOGIN
+Wasteland Coder = +SERVER +DEBUG +VAREDIT +SPAWN -AUTOLOGIN
+Wasteland Developer   = +@ +POLL -AUTOLOGIN
 
-Initiate		= +ADMIN
-Aspirant 		= +@ +BAN
-Knight 			= +@ +SPAWN +FUN +VAREDIT
-Paladin			= +@ +STEALTH +POSSESS +BUILD +SOUND +SERVER +DEBUG
-Head Coder 		= +EVERYTHING *EVERYTHING
-Head Paladin	= +EVERYTHING *EVERYTHING
-Elder			= +EVERYTHING *EVERYTHING
+Liquid Helper	= +ADMIN
+Liquid Trialmin	= +@ +BAN
+Liquid Admin	= +@ +SPAWN +FUN +VAREDIT
+Liquid Game Master	= +@ +STEALTH +POSSESS +BUILD +SOUND +SERVER +DEBUG
+Head Wasteland Coder 	= +EVERYTHING *EVERYTHING
+Head Admin	    = +EVERYTHING *EVERYTHING
+Personnel Manager   = +EVERYTHING *EVERYTHING
 Host 			= +EVERYTHING *EVERYTHING

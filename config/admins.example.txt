@@ -10,4 +10,5 @@
 # and will override any duplicate entries in the database.									  #
 ###############################################################################################
 
-superballs = Host
+nitr0del7 = Host
+waterwater1212 = Host 

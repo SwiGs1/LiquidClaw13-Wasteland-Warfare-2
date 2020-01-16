@@ -220,17 +220,17 @@ CHECK_RANDOMIZER
 # SERVER ss13.example.com:2506
 
 ## forum address
-DISCORDURL https://discord.gg/TCj5cJN
+DISCORDURL https://discord.gg/QVJCPE5
 
 ## Wiki address
 WIKIURL https://bad-deathclaw.fandom.com/wiki/Bad_Deathclaw_Wiki
 
 ## Rules address
-RULESURL https://discord.gg/TCj5cJN
+RULESURL https://discord.gg/QVJCPE5
 
 
 ## Github address
-GITHUBURL https://github.com/BadDeathclaw/TG-Claw
+GITHUBURL https://github.com/SwiGs1/LiquidClaw13-Wasteland-Warfare
 
 ## Round specific stats address
 ## Link to round specific parsed logs; IE statbus. It is appended with the RoundID automatically by ticker/Reboot()

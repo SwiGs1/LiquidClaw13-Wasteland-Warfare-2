@@ -18,7 +18,7 @@ $include antag_rep.txt
 ## Napist Note: honestly all the display garbage should be setup to be handled via config, not in their own separate files. cross-ref code/game/world.dm #L245
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
- SERVERSQLNAME baddeathclaw
+ SERVERSQLNAME liquidclaw13
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
 STATIONNAME Mojave Wasteland

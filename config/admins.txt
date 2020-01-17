@@ -11,4 +11,8 @@
 ###############################################################################################
 
 nitr0del7 = Host
-waterwater1212 = Host 
+waterwater1212 = Host
+GamingAxe115 = Personnel Manager
+saucefromwiseau = Liquid Admin  
+minegw = Liquid Admin 
+SharpenLimited = Liquid Admin

@@ -71,3 +71,48 @@
 	if(!gibbed)
 		visible_message("<span class='danger'>\the [src] shouts something incoherent about brahmins for the last time and stops moving...</span>")
 	..()
+
+// armoured supermutant subtype, will later make more sprites for different armoured apparel - Swigs 
+/mob/living/simple_animal/hostile/supermutant/armouredsupermutant
+	name = "armoured super mutant"
+	desc = "A huge and ugly mutant humanoid except covered in armour."
+	icon = 'icons/fallout/mobs/supermutant.dmi'
+	icon_state = "hulk_armored_s"
+	icon_living = "hulk_armored_s"
+	icon_dead = "hulk_armored_s"
+	speak_chance = 10
+	speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
+	speak_emote = list("shouts", "yells")
+	move_to_delay = 5
+	stat_attack = UNCONSCIOUS
+	robust_searching = 1
+	environment_smash = ENVIRONMENT_SMASH_RWALLS
+	turns_per_move = 5
+	response_help = "touches"
+	response_disarm = "tries to perform a kung fu move, then suddenly remembers that it's actually"
+	response_harm = "hits"
+	maxHealth = 375
+	health = 375
+	force_threshold = 15
+	faction = list("hostile", "supermutant")
+	melee_damage_lower = 60
+	melee_damage_upper = 80
+	mob_size = MOB_SIZE_LARGE
+	anchored = TRUE //unpullable
+	attacktext = "smashes"
+	attack_sound = "punch"
+
+/mob/living/simple_animal/hostile/supermutant/armouredsupermutant/bullet_act(obj/item/projectile/Proj)
+	if(!Proj)
+		return
+	if(prob(85) || Proj.damage > 26)
+		return ..()
+	else
+		visible_message("<span class='danger'>\The [Proj] is deflected harmlessly by \the [src]'s thick skin!</span>")
+		return FALSE
+
+/mob/living/simple_animal/hostile/supermutant/armouredsupermutant/death(gibbed)
+	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
+	icon_state = icon_dead
+	anchored = FALSE
+	..()

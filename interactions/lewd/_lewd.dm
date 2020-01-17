@@ -5,8 +5,6 @@
 #define CUM_TARGET_HAND "hand"
 #define CUM_TARGET_BREASTS "breasts"
 #define GRINDING_FACE_WITH_ANUS "faceanus"
-#define GRINDING_FACE_WITH_FEET "facefeet"
-#define GRINDING_MOUTH_WITH_FEET "mouthfeet"
 #define THIGH_SMOTHERING "thigh_smother"
 #define NUTS_TO_FACE "nut_face"
 
@@ -652,109 +650,6 @@
 	handle_post_sex(LOW_LUST, null, src)
 	partner.dir = get_dir(src, partner)
 	do_fucking_animation(get_dir(src, partner))
-
-/mob/living/proc/do_lickfeet(mob/living/partner)
-	var/message
-
-	if(partner.get_item_by_slot(SLOT_SHOES) != null)
-		message = "licks \the [partner]'s \ [partner.get_item_by_slot(SLOT_SHOES)]."
-	else
-		message = "licks \the [partner]'s feet."
-
-	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
-	visible_message("<font color=purple><b>\The [src]</b> [message]</font>")
-	handle_post_sex(LOW_LUST, null, src)
-	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
-
-/*Grinding YOUR feet in TARGET's face*/
-/mob/living/proc/do_grindface(mob/living/partner)
-	var/message
-
-	if(is_fucking(partner, GRINDING_FACE_WITH_FEET))
-		if(src.get_item_by_slot(SLOT_SHOES) != null)
-			message = "[pick(list("grinds their [get_shoes()] into [partner]'s face.",
-				"presses their footwear down hard on [partner]'s face.",
-				"rubs off the dirt from their [get_shoes()] onto [partner]'s face."))]</span>"
-		else
-			message = "[pick(list("grinds their bare feet into [partner]'s face.",
-				"deviously covers [partner]'s mouth and nose with their bare feet.",
-				"runs the soles of their bare feet against [partner]'s lips."))]</span>"
-
-	else if(is_fucking(partner, GRINDING_MOUTH_WITH_FEET))
-		if(src.get_item_by_slot(SLOT_SHOES) != null)
-			message = "[pick(list("pulls their [get_shoes()] out of [partner]'s mouth and puts them on their face.",
-				"slowly retracts their [get_shoes()] from [partner]'s mouth, putting them on their face instead."))]</span>"
-		else
-			message = "[pick(list("pulls their bare feet out of [partner]'s mouth and rests them on their face instead.",
-				"retracts their bare feet from [partner]'s mouth and grinds them into their face instead."))]</span>"
-
-		set_is_fucking(partner , GRINDING_FACE_WITH_FEET)
-
-	else
-		if(src.get_item_by_slot(SLOT_SHOES) != null)
-			message = "[pick(list("plants their [get_shoes()] ontop of [partner]'s face.",
-				"rests their [get_shoes()] on [partner]'s face and presses down hard.",
-				"harshly places their [get_shoes()] atop [partner]'s face."))]</span>"
-		else
-			message = "[pick(list("plants their bare feet ontop of [partner]'s face.",
-				"rests their feet on [partner]'s face, smothering them.",
-				"positions their bare feet atop [partner]'s face."))]</span>"
-
-		set_is_fucking(partner , GRINDING_FACE_WITH_FEET)
-
-	playsound(loc, "honk/sound/interactions/foot_dry[rand(1, 4)].ogg", 70, 1, -1)
-	visible_message("<font color=purple><b>\The [src]</b> [message]</font>")
-	partner.handle_post_sex(LOW_LUST, null, src)
-	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
-
-	/*Grinding YOUR feet in TARGET's mouth*/
-/mob/living/proc/do_grindmouth(mob/living/partner)
-	var/message
-
-	if(is_fucking(partner, GRINDING_MOUTH_WITH_FEET))
-		if(src.get_item_by_slot(SLOT_SHOES) != null)
-			message = "[pick(list("roughly shoves their [get_shoes()] deeper into [partner]'s mouth.",
-				"harshly forces another inch of their [get_shoes()] into [partner]'s mouth.",
-				"presses their weight down, their [get_shoes()] prying deeper into [partner]'s mouth."))]</span>"
-		else
-			message = "[pick(list("wiggles their toes deep inside [partner]'s mouth.",
-				"crams their barefeet down deeper into [partner]'s mouth, making them gag.",
-				"roughly grinds their feet on [partner]'s tongue."))]</span>"
-
-	else if(is_fucking(partner, GRINDING_FACE_WITH_FEET))
-		if(src.get_item_by_slot(SLOT_SHOES) != null)
-			message = "[pick(list("decides to force their [get_shoes()] deep into [partner]'s mouth.",
-				"pressed the tip of their [get_shoes()] against [partner]'s lips and shoves inwards."))]</span>"
-		else
-			message = "[pick(list("pries open [partner]'s mouth with their toes and shoves their bare foot in.",
-				"presses down their foot even harder, cramming their foot into [partner]'s mouth."))]</span>"
-
-		set_is_fucking(partner , GRINDING_MOUTH_WITH_FEET)
-
-	else
-		if(src.get_item_by_slot(SLOT_SHOES) != null)
-			message = "[pick(list("readies themselves and in one swift motion, shoves their [get_shoes()] into [partner]'s mouth.",
-				"grinds the tip of their [get_shoes()] against [partner]'s mouth before pushing themselves in."))]</span>"
-		else
-			message = "[pick(list("rubs their dirty bare feet across [partner]'s face before prying them into their muzzle.",
-				"forces their barefeet into [partner]'s mouth.",
-				"covers [partner]'s mouth and nose with their foot until they gasp for breath, then shoves both feet inside before they can react."))]</span>"
-		set_is_fucking(partner , GRINDING_MOUTH_WITH_FEET)
-
-	playsound(loc, "honk/sound/interactions/foot_wet[rand(1, 3)].ogg", 70, 1, -1)
-	visible_message("<font color=purple><b>\The [src]</b> [message]</font>")
-	partner.handle_post_sex(LOW_LUST, null, src)
-	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
-
-/mob/living/proc/get_shoes()
-	var/obj/A = get_item_by_slot(SLOT_SHOES)
-	if(findtext (A.name,"the"))
-		return copytext(A.name, 3, (lentext(A.name)) + 1)
-	else
-		return A.name
 
 /mob/living/proc/handle_post_sex(amount, orifice, mob/living/partner)
 	sleep(5)

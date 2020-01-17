@@ -288,37 +288,6 @@
 /datum/interaction/lewd/mountface/display_interaction(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	user.do_mountface(target)
 
-/datum/interaction/lewd/lickfeet
-	command = "lickfeet"
-	description = "Lick their feet."
-	interaction_sound = null
-	require_user_mouth = TRUE
-	max_distance = 1
-
-/datum/interaction/lewd/lickfeet/display_interaction(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	user.do_lickfeet(target)
-
-/datum/interaction/lewd/grindface
-	command = "grindface"
-	description = "Feet grind their face."
-	interaction_sound = null
-	require_target_mouth = TRUE
-	max_distance = 0
-
-/datum/interaction/lewd/grindface/display_interaction(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	user.do_grindface(target)
-
-/datum/interaction/lewd/grindmouth
-	command = "grindmouth"
-	description = "Feet grind their mouth."
-	interaction_sound = null
-	require_target_mouth = TRUE
-	max_distance = 0
-
-/datum/interaction/lewd/grindmouth/display_interaction(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	user.do_grindmouth(target)
-
-
 /datum/interaction/lewd/thighs
 	command = "thigh_smother"
 	description = "Smother them."

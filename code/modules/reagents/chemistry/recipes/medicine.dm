@@ -257,5 +257,5 @@
 	/datum/chemical_reaction/antivenom
 	name = "Anti-Venom"
 	id = "antivenom"
-	results = list("antivenom" = 2)
-	required_reagents = list("calomel" = 1, "blood" = 1,)
+	results = list("antivenom" = 3)
+	required_reagents = list("calomel" = 2, "blood" = 1,)

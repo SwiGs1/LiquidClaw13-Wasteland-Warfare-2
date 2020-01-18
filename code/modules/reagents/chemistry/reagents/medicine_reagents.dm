@@ -1712,18 +1712,17 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	..()
 	. = 1
 
-	/datum/reagent/medicine/antivenom
-	name = "Anti-Venom"
+/datum/reagent/medicine/antivenom
+	name = "Antivenom"
 	id = "antivenom"
-	description = "Heals toxin damage and removes toxins in the bloodstream caused by the injection of venom by wasteland animals. Overdose causes toxin damage."
+	description = "Slowly heals all damage types. Overdose will cause damage in all types instead."
 	reagent_state = LIQUID
-	color = "#C8A5DC"
-	metabolization_rate = 0.2 * REAGENTS_METABOLISM
+	color = "#DCDCDC"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	taste_description = "sour and bitterness"
 
-datum/reagent/medicine/antivenom/on_mob_life(mob/living/carbon/M)
-	M.adjustToxLoss(-3*REM, 0)
+/datum/reagent/medicine/antivenom/on_mob_life(mob/living/carbon/M)
+	M.adjustToxLoss(-2*REM, 0)
 	..()
 	. = 1
 

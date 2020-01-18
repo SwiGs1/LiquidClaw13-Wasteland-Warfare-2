@@ -255,7 +255,7 @@
 	required_temp = 300
 
 	/datum/chemical_reaction/antivenom
-	name = "Anti-Venom"
+	name = "Antivenom"
 	id = "antivenom"
 	results = list("antivenom" = 3)
 	required_reagents = list("calomel" = 2, "blood" = 1,)

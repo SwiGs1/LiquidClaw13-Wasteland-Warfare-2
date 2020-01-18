@@ -1718,14 +1718,12 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	description = "Heals toxin damage and removes toxins in the bloodstream caused by the injection of venom by wasteland animals. Overdose causes toxin damage."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	metabolization_rate = 0.3 * REAGENTS_METABOLISM
+	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	taste_description = "bitterness and warmth"
+	taste_description = "sour and bitterness"
 
-/datum/reagent/medicine/antivenom/on_mob_life(mob/living/carbon/M)
-	M.adjustToxLoss(-2*REM, 0)
-	for(var/datum/reagent/toxin/R in M.reagents.reagent_list)
-		M.reagents.remove_reagent(R.id,1)
+datum/reagent/medicine/antivenom/on_mob_life(mob/living/carbon/M)
+	M.adjustToxLoss(-3*REM, 0)
 	..()
 	. = 1
 

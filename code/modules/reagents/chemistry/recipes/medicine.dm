@@ -259,5 +259,3 @@
 	id = "antivenom"
 	results = list("antivenom" = 2)
 	required_reagents = list("calomel" = 1, "blood" = 1,)
-
-

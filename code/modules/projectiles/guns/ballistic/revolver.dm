@@ -482,4 +482,5 @@
 	fire_sound = 'sound/f13weapons/that_gun.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
 	w_class = WEIGHT_CLASS_NORMAL
+	extra_damage = 18
 	extra_penetration = 15

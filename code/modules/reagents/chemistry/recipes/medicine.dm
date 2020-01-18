@@ -254,4 +254,10 @@
 	required_reagents = list("blood" = 2, "spaceacillin" = 3)
 	required_temp = 300
 
+	/datum/chemical_reaction/antivenom
+	name = "Anti-Venom"
+	id = "antivenom"
+	results = list("antivenom" = 2)
+	required_reagents = list("calomel" = 1, "blood" = 1,)
+
 

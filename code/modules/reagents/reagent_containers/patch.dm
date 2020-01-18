@@ -62,3 +62,10 @@
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
 	list_reagents = list("healing_poultice" = 10)
 	icon_state = "bandaid_healingpoultice"
+
+/obj/item/reagent_containers/pill/patch/antivenom
+	name = "Antivenom"
+	desc = "Antivenom is modern medicine's answer to the tribal antidote by combining barral cactus fruit, and human blood in which the venom has come into contact with, which acts as a cure against poison."
+	list_reagents = list("antivenom" = 10)
+	icon_state = "bandaid_antivenom"
+    

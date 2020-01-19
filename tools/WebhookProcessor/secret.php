@@ -90,7 +90,7 @@ $configitem = -1;//ignore me
 //Discord Webhook Start
 $discordWebHooks[++$configitem] = array();
 // Webhook Url (you can get this from discord via the webhook setting menu of the server or a channel.)
-$discordWebHooks[$configitem]['url'] = 'https://discordapp.com/api/webhooks/538933489920245771/xaoYtVuype-P1rb_uthQLkh_C4iVL3sjtIvFEp7rsfhbBs8tDsSJgE0a9MNWJaoSPBPK';
+$discordWebHooks[$configitem]['url'] = 'https://discordapp.com/api/webhooks/668506115008626688/Wiml-kEszejOnbPG2QiwZXN0zs7xxAm5KtNlIY5ENzuY9oz7aBhnoC96h6oPBH1nTMld';
 // show an embed with more info?
 $discordWebHooks[$configitem]['embed'] = true;
 // if the above is true, don't include the text portion before the embed.
@@ -100,7 +100,7 @@ $discordWebHooks[$configitem]['no_text'] = false;
 //Discord Webhook Start
 $discordWebHooks[++$configitem] = array();
 // Webhook Url (you can get this from discord via the webhook setting menu of the server or a channel.)
-$discordWebHooks[$configitem]['url'] = 'https://discordapp.com/api/webhooks/538933686956064769/q0uDel7S6eutvRIyEwsuZo_ppzAoxqUNeU2PRChYVsYoJmmn2f2YYSDoMjy9FhhXKqpI';
+$discordWebHooks[$configitem]['url'] = 'https://discordapp.com/api/webhooks/668506115008626688/Wiml-kEszejOnbPG2QiwZXN0zs7xxAm5KtNlIY5ENzuY9oz7aBhnoC96h6oPBH1nTMld';
 // show an embed with more info?
 $discordWebHooks[$configitem]['embed'] = true;
 // if the above is true, don't include the text portion before the embed.

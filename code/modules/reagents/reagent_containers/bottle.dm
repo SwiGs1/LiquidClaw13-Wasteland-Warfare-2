@@ -315,3 +315,9 @@
 	desc = "A large bottle containing black powder."
 	volume = 60
 	list_reagents = list("blackpowder" = 60)
+
+/obj/item/reagent_containers/glass/bottle/antivenom //stuck this here for now, at least
+	name = "Antivenom bottle"
+	desc = "Antivenom is modern medicine's answer to the tribal antidote by combining barral cactus fruit, and human blood in which the venom has come into contact with, which acts as a cure against poison."
+	icon_state = "bandaid_antivenom"
+	list_reagents = list("antivenom" = 30)

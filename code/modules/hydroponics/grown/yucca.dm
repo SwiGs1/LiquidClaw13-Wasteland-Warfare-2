@@ -8,6 +8,7 @@
 	icon_grow = "yucca-grow"
 	icon_dead = "yucca-dead"
 	icon_harvest = "yucca-harvest"
+	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/yucca
 	lifespan = 30
 	endurance = 20

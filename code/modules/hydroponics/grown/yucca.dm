@@ -7,13 +7,14 @@
 	growing_icon = 'icons/obj/hydroponics/growing_fruits.dmi'
 	icon_grow = "yucca-grow"
 	icon_dead = "yucca-dead"
+	icon_harvest = "yucca-harvest"
 	product = /obj/item/reagent_containers/food/snacks/grown/yucca
 	lifespan = 30
 	endurance = 20
 	yield = 3
-	growthstages = 5
-	production = 5
-	maturation = 5
+	growthstages = 6
+	production = 6
+	maturation = 6
 
 /obj/item/reagent_containers/food/snacks/grown/yucca
 	seed = /obj/item/seeds/yucca

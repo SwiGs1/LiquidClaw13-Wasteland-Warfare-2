@@ -11,7 +11,7 @@
 	lifespan = 30
 	endurance = 20
 	yield = 3
-	growthstages = 3
+	growthstages = 5
 	production = 5
 	maturation = 5
 
@@ -22,7 +22,7 @@
 	icon_state = "yucca"
 	filling_color = "#FF6347"
 
-/obj/item/reagent_containers/food/snacks/grown/mutfruit/add_juice()
+/obj/item/reagent_containers/food/snacks/grown/yucca/add_juice()
 	if(..())
 		reagents.add_reagent("nutriment", 5 + round((seed.potency / 20), 1))
 		bitesize = 1 + round(reagents.total_volume / 3, 1)

@@ -105,3 +105,13 @@
 	fire_delay = 2
 	extra_damage = 25
 	can_suppress = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/ninemil/maria
+	name = "Maria"
+	desc = "A custom model of an M&A 9mm pistol made by M&A Guns Manufacturers, this weapon has an image of Our Lady of Guadalupe painted on the pearl grips of the firearm. The entire body of the pistol is damascened with ivy and floral details, with a polished nickel finish and a golden trigger."
+	icon_state = "maria9mm"
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 2
+	extra_damage = 32
+	can_suppress = FALSE 

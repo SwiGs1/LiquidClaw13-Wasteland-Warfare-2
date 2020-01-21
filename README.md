@@ -1,3 +1,5 @@
+## LiquidClaw13 - Wasteland Warfare 
+LiquidClaw13 - Wasteland Warfare is a Fallout 13 SS13 server hosted on Byond by Sips and Swigs. Due to the death of other fun F13 servers, this was the only reasonable course of action for people who love the good old classic fallout 13. We're continuing the legacy of glorious Fallout 13 in our own Liquid way, come contribute and take a look at what you can add to LiquidClaw13, join the discord to see what we've done, what were up to and what everyone is doing, give us any tips or got anything that could/can help, dont be shy and give it a try. Come on down to LiquidClaw13. Coming to a Wasteland near you.
 ## F13 codebase 
 
 [![Build Status](https://travis-ci.org/BadDeathclaw/TG-Claw.svg?branch=master)](https://travis-ci.org/BadDeathclaw/TG-Claw) [![Krihelimeter](https://www.krihelinator.xyz/badge/BadDeathclaw/TG-Claw)](http://www.krihelinator.xyz/repositories/BadDeathclaw/TG-Claw) 

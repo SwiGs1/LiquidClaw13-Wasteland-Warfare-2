@@ -68,3 +68,10 @@
 	icon_state = "wild_agave"
 	desc = "The juice of this fleshy plant soothes burns, but it also removes nutrients from the body."
 	produce = /obj/item/reagent_containers/food/snacks/grown/agave
+
+
+/obj/structure/flora/wasteplant/wild_yucca
+	name = "wild banana yucca"
+	icon_state = "wild_yucca"
+	desc = "The banana yucca plant produces the soft, tasty banana yucca fruits."
+	produce = /obj/item/reagent_containers/food/snacks/grown/yucca

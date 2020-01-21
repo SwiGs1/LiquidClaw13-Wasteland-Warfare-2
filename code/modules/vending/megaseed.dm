@@ -9,6 +9,7 @@
 		            /obj/item/seeds/banana = 3,
 		            /obj/item/seeds/cotton = 3,
 		            /obj/item/seeds/berry = 3,
+					/obj/item/seeds/yucca = 3,
 		            /obj/item/seeds/poppy/broc = 3,
 					/obj/item/seeds/cabbage = 3,
 					/obj/item/seeds/carrot = 3,

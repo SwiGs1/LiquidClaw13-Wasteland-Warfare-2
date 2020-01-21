@@ -413,4 +413,12 @@
 	desc = "Strange grass. Looks safe."
 	icon_state = "agave"
 	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
+
+/obj/item/reagent_containers/food/snacks/grown/yucca
+	seed = /obj/item/seeds/yucca
+	name = "banana yucca
+	desc = "A large, soft, fleshy fruit."
+	icon_state = "yucca"
+	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
+	filling_color = "#FF6347"
 */

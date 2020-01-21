@@ -215,10 +215,10 @@
 
 	/obj/item/gun/energy/laser/plasma/defender
 	name ="plasma defender"
-	item_state = "glock86"
-	icon_state = "plasma-pistol"
+	item_state = "plasma-pistol"
+	icon_state = "glock86"
 	desc = "The Austrian-made Glock 86 plasma pistol (also referred to as the Plasma Defender). The Plasma Defender is a powerful energy-based pistol which fires superheated bolts of green plasma."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/defender)
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
 	cell_type = /obj/item/stock_parts/cell/ammo/ec

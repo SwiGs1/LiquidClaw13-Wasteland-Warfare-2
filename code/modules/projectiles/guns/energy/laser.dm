@@ -213,7 +213,7 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
 
-	/obj/item/gun/energy/laser/plasma/defender
+/obj/item/gun/energy/laser/plasma/defender
 	name ="plasma defender"
 	item_state = "defender"
 	icon_state = "defender"

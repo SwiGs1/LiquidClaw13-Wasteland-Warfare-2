@@ -209,4 +209,4 @@
 	damage = 25
 
 /obj/item/projectile/plasma/defender
-    damage = 50 
+	damage = 50

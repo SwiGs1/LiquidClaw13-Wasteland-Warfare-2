@@ -207,3 +207,6 @@
 
 /obj/item/projectile/plasma/scatter
 	damage = 25
+
+/obj/item/projectile/plasma/defender
+    damage = 50 

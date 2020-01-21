@@ -33,3 +33,8 @@
 	projectile_type = /obj/item/projectile/plasma/pistol
 	fire_sound = 'sound/f13weapons/plasma_pistol.ogg'
 	e_cost = 75
+
+/obj/item/ammo_casing/energy/plasma/defender
+	projectile_type = /obj/item/projectile/plasma/defender
+	fire_sound = 'sound/f13weapons/plasma_defender.ogg'
+	e_cost = 70

@@ -49,7 +49,7 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 35
 
-/mob/living/simple_animal/hostile/wolf/mongrel 
+/mob/living/simple_animal/hostile/wolf/mongrel
 	name = "Legion mongrel"
 	desc = "Legion mongrels are dogs owned and bred by the Houndmasters of Caesar's Legion. Mongrels are mainly used in combat and scouting missions by the Legion"
 	icon = 'icons/fallout/mobs/animal.dmi'
@@ -78,7 +78,7 @@
 	attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	move_to_delay = 2
-	speed = 1 
+	speed = 1
 	//sound_speak_chance = 5
 	//sound_speak = list('sound/f13npc/dog_charge1.ogg','sound/f13npc/dog_charge2.ogg','sound/f13npc/dog_charge3.ogg')
 	//aggro_sound_chance = 50
@@ -94,19 +94,19 @@
 
 /mob/living/simple_animal/hostile/wolf/mongrel/attack_hand(mob/living/carbon/human/M as mob)
 	..()
-	if (M.a_intent == var/I_HARM)
+	if (M.a_intent == INTENT_HARM)
 		emote("barks and shows its teeth!")
-	
+
 /mob/living/simple_animal/hostile/wolf/mongrel/handle_automated_action()
 	if(AIStatus == AI_OFF)
 		return 0
-	var/list/possible_targets = ListTargets("NCR", "BOS") 
+	var/list/possible_targets = ListTargets("NCR", "BOS")
 	if(AICanContinue(possible_targets))
 		if(!QDELETED(target) && !targets_from.Adjacent(target))
 			DestroyPathToTarget()
-		if(!MoveToTarget(possible_targets))     
-			if(AIShouldSleep(possible_targets))	
-				toggle_ai(AI_IDLE)			
+		if(!MoveToTarget(possible_targets))
+			if(AIShouldSleep(possible_targets))
+				toggle_ai(AI_IDLE)
 	return 1
 
 /mob/living/simple_animal/hostile/wolf/mongrel/FindTarget(list/possible_targets, HasTargetsList = 0)
@@ -123,7 +123,7 @@
 			continue
 	var/Target = PickTarget(.)
 	GiveTarget(Target)
-	return Target 
+	return Target
 
 /mob/living/simple_animal/hostile/wolf/mongrel/PossibleThreats()
 	. = list("Town", "Wastelander")
@@ -168,28 +168,28 @@
 			LoseTarget()
 			return 0
 		var/target_distance = get_dist(targets_from,target)
-		if(ranged) 
-			if(!target.Adjacent(targets_from) && ranged_cooldown <= world.time) 
+		if(ranged)
+			if(!target.Adjacent(targets_from) && ranged_cooldown <= world.time)
 				OpenFire(target)
-		if(!Process_Spacemove()) 
+		if(!Process_Spacemove())
 			walk(src,0)
 			return 1
-		if(retreat_distance != null) 
-			if(target_distance <= retreat_distance) 
+		if(retreat_distance != null)
+			if(target_distance <= retreat_distance)
 				walk_away(src,target,retreat_distance,move_to_delay)
 			else
-				Goto(target,move_to_delay,minimum_distance) 
+				Goto(target,move_to_delay,minimum_distance)
 		else
 			Goto(target,move_to_delay,minimum_distance)
 		if(target)
-			if(targets_from && isturf(targets_from.loc) && target.Adjacent(targets_from)) 
+			if(targets_from && isturf(targets_from.loc) && target.Adjacent(targets_from))
 				AttackingTarget()
 				GainPatience()
 			return 1
 		return 0
 	if(environment_smash)
-		if(target.loc != null && get_dist(targets_from, target.loc) <= vision_range) 
-			if(ranged_ignores_vision && ranged_cooldown <= world.time) 
+		if(target.loc != null && get_dist(targets_from, target.loc) <= vision_range)
+			if(ranged_ignores_vision && ranged_cooldown <= world.time)
 				OpenFire(target)
 			if((environment_smash & ENVIRONMENT_SMASH_WALLS) || (environment_smash & ENVIRONMENT_SMASH_RWALLS))
 				Goto(target,move_to_delay,minimum_distance)
@@ -222,7 +222,7 @@
 	..(gibbed)
 /mob/living/simple_animal/hostile/wolf/mongrel/CheckFriendlyFire(atom/A)
 	if(check_friendly_fire)
-		for(var/turf/T in getline(src,A)) 
+		for(var/turf/T in getline(src,A))
 			for(var/mob/living/L in T)
 				if(L == src || L == A)
 					continue
@@ -236,7 +236,7 @@
 		if(AI_IDLE)
 			if(FindTarget(possible_targets, 1))
 				. = 1
-				toggle_ai(AI_ON) 
+				toggle_ai(AI_ON)
 			else
 				. = 0
 /mob/living/simple_animal/hostile/wolf/mongrel/AIShouldSleep(var/list/possible_targets)

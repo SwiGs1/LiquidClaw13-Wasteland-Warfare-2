@@ -1,5 +1,15 @@
+#define HOSTILE_STANCE_IDLE      TRUE
+#define HOSTILE_STANCE_ALERT     2
+#define HOSTILE_STANCE_ATTACK    3
+#define HOSTILE_STANCE_ATTACKING 4
+#define HOSTILE_STANCE_TIRED     5
 #define COMMANDED_STOP 6
 #define COMMANDED_FOLLOW 7
+#define I_HELP		"help"
+#define I_DISARM	"disarm"
+#define I_GRAB		"grab"
+#define I_HARM		"harm"
+
 
 /mob/living/simple_animal/hostile/commanded
 	name = "commanded"

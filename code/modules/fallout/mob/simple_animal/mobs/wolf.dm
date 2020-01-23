@@ -59,7 +59,7 @@
 	icon_gib = "gib"
 	maxHealth = 90
 	health = 90
-	faction = list("hostile", "Legion")
+	faction = list("Legion")
 	emote_hear = list("barks", "growls", "howls")
 	emote_see = list("bears its teeth", "stares aggressively", "shakes its head", "looks around")
 	turns_per_move = 1
@@ -76,6 +76,7 @@
  //   idle_vision_range = 7
 	attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
+	move_to_delay = 2
 	speed = 1 
 	//sound_speak_chance = 5
 	//sound_speak = list('sound/f13npc/dog_charge1.ogg','sound/f13npc/dog_charge2.ogg','sound/f13npc/dog_charge3.ogg')
@@ -227,3 +228,5 @@
 				toggle_ai(AI_ON) 
 			else
 				. = 0
+/mob/living/simple_animal/hostile/wolf/mongrel/AIShouldSleep(var/list/possible_targets)
+	return !FindTarget(possible_targets, 1)

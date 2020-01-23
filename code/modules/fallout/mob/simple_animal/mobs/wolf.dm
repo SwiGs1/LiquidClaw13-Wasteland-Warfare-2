@@ -73,7 +73,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 40
 	aggro_vision_range = 15
-    idle_vision_range = 7
+ //   idle_vision_range = 7
 	attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	speed = 1 
@@ -98,10 +98,6 @@
 				toggle_ai(AI_IDLE)			
 	return 1
 
-/mob/living/simple_animal/hostile/wolf/mongrel/ListTargets("NCR", "BOS")
-	if(!search_objects)
-		. = hearers(vision_range, targets_from) - src
-
 /mob/living/simple_animal/hostile/wolf/mongrel/FindTarget(list/possible_targets, HasTargetsList = 0)
 	. = list()
 	if(!HasTargetsList)
@@ -119,7 +115,7 @@
 	return Target 
 
 /mob/living/simple_animal/hostile/wolf/mongrel/PossibleThreats("Town", "Wastelander")
-	. = list()
+	. = list("NCR", "BOS")
 	for(var/pos_targ in ListTargets())
 		var/atom/A = pos_targ
 		if(Found(A))

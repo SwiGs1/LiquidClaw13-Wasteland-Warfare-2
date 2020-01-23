@@ -114,8 +114,8 @@
 	GiveTarget(Target)
 	return Target 
 
-/mob/living/simple_animal/hostile/wolf/mongrel/PossibleThreats("Town", "Wastelander")
-	. = list()
+/mob/living/simple_animal/hostile/wolf/mongrel/PossibleThreats()
+	. = list("Town", "Wastelander")
 	for(var/pos_targ in ListTargets())
 		var/atom/A = pos_targ
 		if(Found(A))

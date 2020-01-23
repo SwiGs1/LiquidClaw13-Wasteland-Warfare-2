@@ -115,7 +115,7 @@
 	return Target 
 
 /mob/living/simple_animal/hostile/wolf/mongrel/PossibleThreats("Town", "Wastelander")
-	. = list("NCR", "BOS")
+	. = list()
 	for(var/pos_targ in ListTargets())
 		var/atom/A = pos_targ
 		if(Found(A))

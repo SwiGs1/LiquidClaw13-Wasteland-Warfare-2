@@ -77,19 +77,18 @@
 	attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 	speed = 1 
-	sound_speak_chance = 5
-	sound_speak = list('sound/f13npc/dog_charge1.ogg','sound/f13npc/dog_charge2.ogg','sound/f13npc/dog_charge3.ogg')
-	aggro_sound_chance = 50
-	aggro_sound = list('sound/f13npc/dog_alert1.ogg','sound/f13npc/dog_alert2.ogg','sound/f13npc/dog_alert3.ogg')
+	//sound_speak_chance = 5
+	//sound_speak = list('sound/f13npc/dog_charge1.ogg','sound/f13npc/dog_charge2.ogg','sound/f13npc/dog_charge3.ogg')
+	//aggro_sound_chance = 50
+	//aggro_sound = list('sound/f13npc/dog_alert1.ogg','sound/f13npc/dog_alert2.ogg','sound/f13npc/dog_alert3.ogg')
 	death_sound = 'sound/f13npc/dog_death.ogg'
- 	environment_smash = 0
 	butcher_results = list(/obj/item/stack/sheet/animalhide/wolf = 1, \
 	/obj/item/reagent_containers/food/snacks/meat/slab/wolf = 1)
 	
 /mob/living/simple_animal/hostile/wolf/mongrel/handle_automated_action()
 	if(AIStatus == AI_OFF)
 		return 0
-	possible_targets = ListTargets("NCR", "BOS") 
+	var/list/possible_targets = ListTargets("NCR", "BOS") 
 	if(AICanContinue(possible_targets))
 		if(!QDELETED(target) && !targets_from.Adjacent(target))
 			DestroyPathToTarget()
@@ -135,7 +134,7 @@
 				Targets -= A
 	if(!Targets.len)
 		return
-	chosen_target = pick(Targets)
+	var/chosen_target = pick(Targets)
 	return chosen_target
 
 /mob/living/simple_animal/hostile/wolf/mongrel/GiveTarget(new_target)
@@ -152,11 +151,11 @@
 		LoseTarget()
 		return 0
 	if(target in possible_targets)
-		turf/T = get_turf(src)
+		var/turf/T = get_turf(src)
 		if(target.z != T.z)
 			LoseTarget()
 			return 0
-		target_distance = get_dist(targets_from,target)
+		var/target_distance = get_dist(targets_from,target)
 		if(ranged) 
 			if(!target.Adjacent(targets_from) && ranged_cooldown <= world.time) 
 				OpenFire(target)

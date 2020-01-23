@@ -68,7 +68,6 @@
 	response_help   = "pets"
 	response_disarm = "shoves aside"
 	response_harm   = "kicks"
-	known_commands = list("stay", "stop", "attack", "follow")
 	healable = 1
 	stat_attack = UNCONSCIOUS
 	melee_damage_lower = 30
@@ -86,16 +85,6 @@
 	death_sound = 'sound/f13npc/dog_death.ogg'
 	butcher_results = list(/obj/item/stack/sheet/animalhide/wolf = 1, \
 	/obj/item/reagent_containers/food/snacks/meat/slab/wolf = 1)
-
-/mob/living/simple_animal/hostile/wolf/mongrel/hit_with_weapon(obj/item/O, mob/living/user, var/effective_force, var/hit_zone)
-	. = ..()
-	if (!.)
-		emote("barks and shows its teeth!")
-
-/mob/living/simple_animal/hostile/wolf/mongrel/attack_hand(mob/living/carbon/human/M as mob)
-	..()
-	if (M.a_intent == I_HARM)
-		emote("barks and shows its teeth!")
 	
 /mob/living/simple_animal/hostile/wolf/mongrel/handle_automated_action()
 	if(AIStatus == AI_OFF)

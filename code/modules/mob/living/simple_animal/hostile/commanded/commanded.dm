@@ -18,6 +18,8 @@
 	melee_damage_upper = FALSE
 	density = FALSE
 	attacktext = "swarmed"
+	var/stance = HOSTILE_STANCE_IDLE	//Used to determine behavior
+	var/mob/living/target_mob
 	var/list/command_buffer = list()
 	var/list/known_commands = list("stay", "stop", "attack", "follow")
 	var/mob/master = null //undisputed master. Their commands hold ultimate sway and ultimate power.

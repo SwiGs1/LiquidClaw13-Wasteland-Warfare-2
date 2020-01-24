@@ -264,6 +264,27 @@
 		repl_chars[val] = ""
 	return replace_characters(t, repl_chars)
 
+//returns a list of everybody we wanna do stuff with.
+/mob/living/simple_animal/hostile/commanded/proc/get_targets_by_name(var/text, var/filter_friendlies = FALSE)
+	var/list/possible_targets = hearers(src,10)
+	. = list()
+	for (var/mob/M in possible_targets)
+		if (filter_friendlies && ((M in friends) || M.faction == faction || M == master))
+			continue
+		var/found = FALSE
+		if (findtext(text, "[M]"))
+			found = TRUE
+		else
+			var/list/parsed_name = splittext(proc/replace_characters(lowertext(html_decode("[M]")),list("-"=" ", "."=" ", "," = " ", "'" = " ")), " ") //this big MESS is basically 'turn this into words, no punctuation, lowercase so we can check first name/last name/etc'
+			for (var/a in parsed_name)
+				if (a == "the" || length(a) < 2) //get rid of shit words.
+					continue
+				if (findtext(text,"[a]"))
+					found = TRUE
+					break
+		if (found)
+			. += M
+
 /mob/living/simple_animal/hostile/commanded/proc/attack_command(var/mob/speaker,var/text)
 	target_mob = null //want me to attack something? Well I better forget my old target.
 	walk_to(src,0)

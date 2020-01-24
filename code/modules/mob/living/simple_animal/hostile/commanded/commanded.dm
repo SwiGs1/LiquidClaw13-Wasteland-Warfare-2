@@ -9,6 +9,105 @@
 #define I_DISARM	"disarm"
 #define I_GRAB		"grab"
 #define I_HARM		"harm"
+
+
+/mob/living/simple_animal/hostile/commanded
+	name = "commanded"
+	var/stance = HOSTILE_STANCE_IDLE	//Used to determine behavior
+	stance = COMMANDED_STOP
+	melee_damage_lower = FALSE
+	melee_damage_upper = FALSE
+	density = FALSE
+	attacktext = "swarmed"
+	var/mob/living/target_mob
+	var/list/command_buffer = list()
+	var/list/known_commands = list("stay", "stop", "attack", "follow")
+	var/mob/master = null //undisputed master. Their commands hold ultimate sway and ultimate power.
+	var/list/allowed_targets = list() //WHO CAN I KILL D:
+
+/mob/living/simple_animal/hostile/commanded/mob/proc/hear_say(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "", var/italics = FALSE, var/mob/speaker = null, var/sound/speech_sound, var/sound_vol)
+	if ((speaker in friends) || speaker == master)
+//		world.log << "DEBUG: The command was recognized"
+		command_buffer.Add(speaker)
+		command_buffer.Add(lowertext(html_decode(message)))
+	return FALSE
+
+/mob/living/simple_animal/hostile/commanded/Life()
+	while (command_buffer.len > 0)
+		var/mob/speaker = command_buffer[1]
+		var/text = command_buffer[2]
+		var/filtered_name = lowertext(html_decode(name))
+		if (dd_hasprefix(text,filtered_name))
+			var/substring = copytext(text,length(filtered_name)+1) //get rid of the name.
+			listen(speaker,substring)
+		command_buffer.Remove(command_buffer[1],command_buffer[2])
+	. = ..()
+	if (.)
+		switch(stance)
+			if (COMMANDED_FOLLOW)
+				follow_target()
+			if (COMMANDED_STOP)
+				commanded_stop()
+
+
+
+/mob/living/simple_animal/hostile/commanded/FindTarget(var/new_stance = HOSTILE_STANCE_ATTACK)
+	if (!allowed_targets.len)
+		return null
+	var/mode = "specific"
+	if (allowed_targets[1] == "everyone") //we have been given the golden gift of murdering everything. Except our master, of course. And our friends. So just mostly everyone.
+		mode = "everyone"
+	for (var/atom/A in ListTargets(7))
+		var/mob/M = null
+		if (A == src)
+			continue
+		if (isliving(A))
+			M = A
+		if (M && M.stat)
+			continue
+		if (mode == "specific")
+			if (!(A in allowed_targets))
+				continue
+			stance = new_stance
+			return A
+		else
+			if (M == master || (M in friends))
+				continue
+			stance = new_stance
+			return A
+
+
+/mob/living/simple_animal/hostile/commanded/proc/follow_target()
+	stop_automated_movement = TRUE
+	if (!target_mob)
+		return
+	if (target_mob in ListTargets(7))
+		walk_to(src,target_mob,1,move_to_delay)
+
+/mob/living/simple_animal/hostile/commanded/proc/commanded_stop() //basically a proc that runs whenever we are asked to stay put. Probably going to remain unused.
+	return
+
+/mob/living/simple_animal/hostile/commanded/proc/listen(var/mob/speaker, var/text)
+	for (var/command in known_commands)
+		if (findtext(text,command))
+			switch(command)
+				if ("stay")
+					if (stay_command(speaker,text)) //find a valid command? Stop. Dont try and find more.
+						break
+				if ("stop")
+					if (stop_command(speaker,text))
+						break
+				if ("attack")
+					if (attack_command(speaker,text))
+						break
+				if ("follow")
+					if (follow_command(speaker,text))
+						break
+				else
+					misc_command(speaker,text) //for specific commands
+
+	return TRUE
+
 /mob/living/simple_animal/hostile/commanded/proc/sanitize(var/input, var/max_length = MAX_MESSAGE_LEN, var/encode = TRUE, var/trim = TRUE, var/extra = TRUE)
 	if (!input)
 		return
@@ -164,104 +263,6 @@
 	for (var/val in chars)
 		repl_chars[val] = ""
 	return replace_characters(t, repl_chars)
-
-
-/mob/living/simple_animal/hostile/commanded
-	name = "commanded"
-	var/stance = HOSTILE_STANCE_IDLE	//Used to determine behavior
-	stance = COMMANDED_STOP
-	melee_damage_lower = FALSE
-	melee_damage_upper = FALSE
-	density = FALSE
-	attacktext = "swarmed"
-	var/mob/living/target_mob
-	var/list/command_buffer = list()
-	var/list/known_commands = list("stay", "stop", "attack", "follow")
-	var/mob/master = null //undisputed master. Their commands hold ultimate sway and ultimate power.
-	var/list/allowed_targets = list() //WHO CAN I KILL D:
-
-/mob/living/simple_animal/hostile/commanded/mob/proc/hear_say(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "", var/italics = FALSE, var/mob/speaker = null, var/sound/speech_sound, var/sound_vol)
-	if ((speaker in friends) || speaker == master)
-//		world.log << "DEBUG: The command was recognized"
-		command_buffer.Add(speaker)
-		command_buffer.Add(lowertext(html_decode(message)))
-	return FALSE
-
-/mob/living/simple_animal/hostile/commanded/Life()
-	while (command_buffer.len > 0)
-		var/mob/speaker = command_buffer[1]
-		var/text = command_buffer[2]
-		var/filtered_name = lowertext(html_decode(name))
-		if (dd_hasprefix(text,filtered_name))
-			var/substring = copytext(text,length(filtered_name)+1) //get rid of the name.
-			listen(speaker,substring)
-		command_buffer.Remove(command_buffer[1],command_buffer[2])
-	. = ..()
-	if (.)
-		switch(stance)
-			if (COMMANDED_FOLLOW)
-				follow_target()
-			if (COMMANDED_STOP)
-				commanded_stop()
-
-
-
-/mob/living/simple_animal/hostile/commanded/FindTarget(var/new_stance = HOSTILE_STANCE_ATTACK)
-	if (!allowed_targets.len)
-		return null
-	var/mode = "specific"
-	if (allowed_targets[1] == "everyone") //we have been given the golden gift of murdering everything. Except our master, of course. And our friends. So just mostly everyone.
-		mode = "everyone"
-	for (var/atom/A in ListTargets(7))
-		var/mob/M = null
-		if (A == src)
-			continue
-		if (isliving(A))
-			M = A
-		if (M && M.stat)
-			continue
-		if (mode == "specific")
-			if (!(A in allowed_targets))
-				continue
-			stance = new_stance
-			return A
-		else
-			if (M == master || (M in friends))
-				continue
-			stance = new_stance
-			return A
-
-
-/mob/living/simple_animal/hostile/commanded/proc/follow_target()
-	stop_automated_movement = TRUE
-	if (!target_mob)
-		return
-	if (target_mob in ListTargets(7))
-		walk_to(src,target_mob,1,move_to_delay)
-
-/mob/living/simple_animal/hostile/commanded/proc/commanded_stop() //basically a proc that runs whenever we are asked to stay put. Probably going to remain unused.
-	return
-
-/mob/living/simple_animal/hostile/commanded/proc/listen(var/mob/speaker, var/text)
-	for (var/command in known_commands)
-		if (findtext(text,command))
-			switch(command)
-				if ("stay")
-					if (stay_command(speaker,text)) //find a valid command? Stop. Dont try and find more.
-						break
-				if ("stop")
-					if (stop_command(speaker,text))
-						break
-				if ("attack")
-					if (attack_command(speaker,text))
-						break
-				if ("follow")
-					if (follow_command(speaker,text))
-						break
-				else
-					misc_command(speaker,text) //for specific commands
-
-	return TRUE
 
 /mob/living/simple_animal/hostile/commanded/proc/attack_command(var/mob/speaker,var/text)
 	target_mob = null //want me to attack something? Well I better forget my old target.

@@ -182,3 +182,7 @@
 	projectiletype = /obj/item/projectile/bullet
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
+
+/mob/living/simple_animal/hostile/handy/securitron/Initialize()
+	. = ..()
+	add_overlay("Securitron_e")

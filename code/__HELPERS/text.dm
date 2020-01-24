@@ -24,6 +24,33 @@
 /*
  * Text sanitization
  */
+ 
+/proc/sanitize(var/input, var/max_length = MAX_MESSAGE_LEN, var/encode = TRUE, var/trim = TRUE, var/extra = TRUE)
+	if (!input)
+		return
+
+	if (max_length)
+		input = copytext(input,1,max_length)
+
+	if (extra)
+		input = replace_characters(input, list("\n"=" ","\t"=" "))
+
+	if (encode)
+		// The below \ escapes have a space inserted to attempt to enable Travis auto-checking of span class usage. Please do not remove the space.
+		//In addition to processing html, html_encode removes byond formatting codes like "\ red", "\ i" and other.
+		//It is important to avoid double-encode text, it can "break" quotes and some other characters.
+		//Also, keep in mind that escaped characters don't work in the interface (window titles, lower left corner of the main window, etc.)
+		input = rhtml_encode(input)
+	else
+		//If not need encode text, simply remove < and >
+		//note: we can also remove here byond formatting codes: 0xFF + next byte
+		input = replace_characters(input, list("<"=" ", ">"=" "))
+
+	if (trim)
+		//Maybe, we need trim text twice? Here and before copytext?
+		input = trim(input)
+
+	return input
 
 //Simply removes < and > and limits the length of the message
 /proc/strip_html_simple(t,limit=MAX_MESSAGE_LEN)

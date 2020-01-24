@@ -13,12 +13,12 @@
 
 /mob/living/simple_animal/hostile/commanded
 	name = "commanded"
+	var/stance = HOSTILE_STANCE_IDLE	//Used to determine behavior
 	stance = COMMANDED_STOP
 	melee_damage_lower = FALSE
 	melee_damage_upper = FALSE
 	density = FALSE
 	attacktext = "swarmed"
-	var/stance = HOSTILE_STANCE_IDLE	//Used to determine behavior
 	var/mob/living/target_mob
 	var/list/command_buffer = list()
 	var/list/known_commands = list("stay", "stop", "attack", "follow")

@@ -1,5 +1,4 @@
-//Fallout 13 nightkin directory - Swigs 
-
+//Fallout 13 nightkin directory - Swigs
 /mob/living/simple_animal/hostile/nightkin
 	name = "nightkin"
 	desc = "A nightkin, an elite sub-type of super mutant. Their gray-blue skin is a result of of their use of Stealth Boys.  "
@@ -29,12 +28,6 @@
 	attacktext = "slashes"
 	attack_sound = "punch"
 
-/mob/living/simple_animal/hostile/nightkin/chameleon/on_life(mob/living/simple_animal/hostile/nightkin)
-    alpha = 255
-
-/mob/living/simple_animal/hostile/nightkin/chameleon/on_move(mob/living/simple_animal/hostile/nightkin)
-    alpha = max(0, alpha - 30)
-
 /mob/living/simple_animal/hostile/nightkin/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
@@ -47,6 +40,6 @@
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'
 	icon_state = icon_dead
-    alpha = 255
+	alpha = 255
 	anchored = FALSE
 	..()

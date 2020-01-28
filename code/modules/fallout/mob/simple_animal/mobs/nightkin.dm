@@ -46,8 +46,6 @@
 		if(CanAttack(A))//Can we attack it?
 			. += A
 			continue
-		icon = 'icons/fallout/mobs/nightkin_cloaked.dmi'
-		icon_state = "nightkin_jailer_cloak"
 	var/Target = PickTarget(.)
 	GiveTarget(Target)
 	return Target

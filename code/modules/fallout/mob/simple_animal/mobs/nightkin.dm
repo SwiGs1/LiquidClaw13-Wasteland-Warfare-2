@@ -30,9 +30,10 @@
 
 
 /mob/living/simple_animal/hostile/attacked_by(obj/item/I, mob/living/user)
-	if(stat == CONSCIOUS && !target && AIStatus != AI_OFF && !client && user)
+	if(stat == CONSCIOUS && !target && AIStatus != AI_ON && !client && user)
 		icon_state = "nightkin_jailer_cloaked"
-         return ..()
+        icon_state = "nightkin_jailer_cloaked"
+		return ..()
 
 /mob/living/simple_animal/hostile/nightkin/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)

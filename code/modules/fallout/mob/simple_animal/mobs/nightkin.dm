@@ -35,9 +35,9 @@ mob/living/simple_animal/hostile/nightkin/proc/cloaking
 		adjustFireLoss(damage)
 		if(TOX)
 		adjustToxLoss(damage)
-	user.alpha = 75
+		user.alpha = 75
 		else
-		user.alpha = initial(user.alpha)	
+		user.alpha = initial(user.alpha)
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'

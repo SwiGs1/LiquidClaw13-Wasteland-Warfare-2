@@ -28,9 +28,17 @@
 	attacktext = "slashes"
 	attack_sound = "punch"
 
-/mob/living/simple_animal/hostile/handy/Initialize()
-	. = ..()
-	add_overlay("nightkin_jailer_cloaked")
+/mob/living/simple_animal/hostile/handle_automated_action()
+	if(AIStatus == AI_OFF)
+		return 0 
+    var/alpha=255 
+
+/mob/living/simple_animal/hostile/attacked_by(obj/item/I, mob/living/user)
+	if(stat == CONSCIOUS && !target && AIStatus != AI_OFF && !client && user)
+		FindTarget(list(user), 1)
+	return ..()
+    var/alpha=33
+
 
 /mob/living/simple_animal/hostile/nightkin/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)

@@ -5,7 +5,7 @@
 	icon = 'icons/fallout/mobs/nightkin.dmi'
 	icon_state = "nightkin_jailer_s"
 	icon_living = "nightkin_jailer_s"
-	icon_dead = "nightkin_jailer_s"
+	icon_dead = "nightkin_jailer_dead"
 	speak_chance = 10
 	speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 	speak_emote = list("shouts", "yells")
@@ -27,10 +27,10 @@
 	anchored = TRUE //unpullable
 	attacktext = "slashes"
 	attack_sound = "punch"
-	
+
 /mob/living/simple_animal/hostile/nightkin/ListTargets()//Step 1, find out what we can see
 	if(!search_objects)
-		. = hearers(vision_range, targets_from) - src 
+		. = hearers(vision_range, targets_from) - src
 	icon = 'icons/fallout/mobs/nightkin_cloaked.dmi'
 	icon_state = "nightkin_jailer_cloak"
 
@@ -50,7 +50,7 @@
 		icon_state = "nightkin_jailer_cloak"
 	var/Target = PickTarget(.)
 	GiveTarget(Target)
-	return Target 	
+	return Target
 
 /mob/living/simple_animal/hostile/nightkin/LoseTarget()
 	target = null

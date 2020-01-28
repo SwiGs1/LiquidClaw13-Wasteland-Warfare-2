@@ -28,13 +28,10 @@
 	attacktext = "slashes"
 	attack_sound = "punch"
 
-/mob/living/simple_animal/hostile/attacked_by(obj/item/I, mob/living/user)
-	if(stat == CONSCIOUS && !target && !client && user)
-		New(icon_state= "nightkin_jailer_cloaked")
-	return ..()
 
 /mob/living/simple_animal/hostile/nightkin/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
+        New(icon = 'icons/fallout/mobs/nightkin_cloaked.dmi' , icon_state = "nightkin_jailer_cloaked")
 		return
 	if(prob(85) || Proj.damage > 26)
 		return ..()

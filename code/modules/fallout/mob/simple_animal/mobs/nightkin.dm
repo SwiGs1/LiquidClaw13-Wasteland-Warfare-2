@@ -52,8 +52,7 @@
 
 /mob/living/simple_animal/hostile/nightkin/LoseTarget()
 	target = null
-	icon = 'icons/fallout/mobs/nightkin.dmi'
-	icon_state = "nightkin_jailer_s"
+	icon_state = icon_living
 	walk(src, 0)
 	LoseAggro()
 

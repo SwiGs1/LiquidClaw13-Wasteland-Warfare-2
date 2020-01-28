@@ -29,14 +29,14 @@
 	attack_sound = "punch"
 
 mob/living/simple_animal/hostile/nightkin/proc/cloaking
-			if(BRUTE)
-				adjustBruteLoss(damage)
-			if(BURN)
-				adjustFireLoss(damage)
-			if(TOX)
-				adjustToxLoss(damage)
-				user.alpha = 75
-			else
+		if(BRUTE)
+		adjustBruteLoss(damage)
+		if(BURN)
+		adjustFireLoss(damage)
+		if(TOX)
+		adjustToxLoss(damage)
+	user.alpha = 75
+		else
 		user.alpha = initial(user.alpha)	
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)

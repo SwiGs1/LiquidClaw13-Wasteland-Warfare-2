@@ -27,17 +27,11 @@
 	anchored = TRUE //unpullable
 	attacktext = "slashes"
 	attack_sound = "punch"
-
-
-/mob/living/simple_animal/hostile/nightkin/bullet_act(obj/item/projectile/Proj)
-	if(!Proj)
-        New(icon = 'icons/fallout/mobs/nightkin_cloaked.dmi' , icon_state = "nightkin_jailer_cloaked")
-		return
-	if(prob(85) || Proj.damage > 26)
-		return ..()
-	else
-		visible_message("<span class='danger'>\The [Proj] is deflected harmlessly by \the [src]'s thick skin! probably?</span>")
-		return FALSE
+	var/invisibility = TRUE
+	
+/mob/living/proc/simple_animal/hostile/nightkin/proc/on_hit(obj/item/projectile/P)
+	if(invisibility || alpha == 33)//cloaked
+		return 0
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'

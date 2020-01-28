@@ -34,12 +34,30 @@
 	icon = 'icons/fallout/mobs/nightkin_cloaked.dmi'
 	icon_state = "nightkin_jailer_cloak"
 
-/mob/living/simple_animal/hostile/nightkin/MoveToTarget(var/list/possible_targets)//Step 5, handle movement between us and our target
-	stop_automated_movement = 1
-	if(!target || !CanAttack(target))
-		LoseTarget()
+/mob/living/simple_animal/hostile/nigtkin/FindTarget(var/list/possible_targets, var/HasTargetsList = 0)//Step 2, filter down possible targets to things we actually care about
+	. = list()
+	if(!HasTargetsList)
+		possible_targets = ListTargets()
+	for(var/pos_targ in possible_targets)
+		var/atom/A = pos_targ
+		if(Found(A))//Just in case people want to override targetting
+			. = list(A)
+			break
+		if(CanAttack(A))//Can we attack it?
+			. += A
+			continue
+		icon = 'icons/fallout/mobs/nightkin_cloaked.dmi'
+		icon_state = "nightkin_jailer_cloak"
+	var/Target = PickTarget(.)
+	GiveTarget(Target)
+	return Target 	
+
+/mob/living/simple_animal/hostile/nightkin/LoseTarget()
+	target = null
 	icon = 'icons/fallout/mobs/nightkin.dmi'
-	icon_state = "nightkin_jailer_s"	
+	icon_state = "nightkin_jailer_s"
+	walk(src, 0)
+	LoseAggro()
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'

@@ -27,17 +27,12 @@
 	anchored = TRUE //unpullable
 	attacktext = "slashes"
 	attack_sound = "punch"
-
-mob/living/simple_animal/hostile/nightkin/proc/cloaking
-		if(BRUTE)
-		adjustBruteLoss(damage)
-		if(BURN)
-		adjustFireLoss(damage)
-		if(TOX)
-		adjustToxLoss(damage)
-		user.alpha = 75
-		else
-		user.alpha = initial(user.alpha)
+	
+/mob/living/simple_animal/hostile/nightkin/ListTargets()//Step 1, find out what we can see
+	if(!search_objects)
+		. = hearers(vision_range, targets_from) - src 
+	icon = 'icons/fallout/mobs/nightkin_cloaked.dmi'
+	icon_state = "nightkin_jailer_cloak"
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'

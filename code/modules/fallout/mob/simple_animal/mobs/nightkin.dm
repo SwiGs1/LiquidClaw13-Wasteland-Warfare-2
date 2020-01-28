@@ -27,11 +27,17 @@
 	anchored = TRUE //unpullable
 	attacktext = "slashes"
 	attack_sound = "punch"
-	var/invisibility = TRUE
-	
-/mob/living/proc/simple_animal/hostile/nightkin/proc/on_hit(obj/item/projectile/P)
-	if(invisibility || alpha == 33)//cloaked
-		return 0
+
+mob/living/simple_animal/hostile/nightkin/proc/cloaking
+			if(BRUTE)
+				adjustBruteLoss(damage)
+			if(BURN)
+				adjustFireLoss(damage)
+			if(TOX)
+				adjustToxLoss(damage)
+				user.alpha = 75
+			else
+		user.alpha = initial(user.alpha)	
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'

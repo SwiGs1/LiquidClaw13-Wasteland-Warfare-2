@@ -30,14 +30,12 @@
 
 /mob/living/simple_animal/hostile/handle_automated_action()
 	if(AIStatus == AI_OFF)
-		return 0 
-    var/alpha=255 
+    icon_state = "nightkin_jailer_s"
 
 /mob/living/simple_animal/hostile/attacked_by(obj/item/I, mob/living/user)
 	if(stat == CONSCIOUS && !target && AIStatus != AI_OFF && !client && user)
-		FindTarget(list(user), 1)
+		icon_state = "nightkin_jailer_cloaked"
 	return ..()
-    var/alpha=33
 
 
 /mob/living/simple_animal/hostile/nightkin/bullet_act(obj/item/projectile/Proj)

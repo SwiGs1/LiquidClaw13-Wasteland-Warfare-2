@@ -34,6 +34,13 @@
 	icon = 'icons/fallout/mobs/nightkin_cloaked.dmi'
 	icon_state = "nightkin_jailer_cloak"
 
+/mob/living/simple_animal/hostile/nightkin/MoveToTarget(var/list/possible_targets)//Step 5, handle movement between us and our target
+	stop_automated_movement = 1
+	if(!target || !CanAttack(target))
+		LoseTarget()
+	icon = 'icons/fallout/mobs/nightkin.dmi'
+	icon_state = "nightkin_jailer_s"	
+
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'
 	icon_state = icon_dead

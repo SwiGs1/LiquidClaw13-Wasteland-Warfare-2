@@ -28,6 +28,10 @@
 	attacktext = "slashes"
 	attack_sound = "punch"
 
+/mob/living/simple_animal/hostile/handy/Initialize()
+	. = ..()
+	add_overlay("nightkin_jailer_cloaked")
+
 /mob/living/simple_animal/hostile/nightkin/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
@@ -40,6 +44,5 @@
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'
 	icon_state = icon_dead
-	alpha = 255
 	anchored = FALSE
 	..()

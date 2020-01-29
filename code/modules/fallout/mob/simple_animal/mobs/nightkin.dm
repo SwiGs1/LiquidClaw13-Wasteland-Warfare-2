@@ -28,18 +28,18 @@
 	attacktext = "slashes"
 	attack_sound = "punch"
 
-/mob/living/simple_animal/hostile/nightkin/ListTargets()//Step 1, find out what we can see
+/mob/living/simple_animal/hostile/nightkin/ListTargets() //when we see enemy, we cloak 
 	if(!search_objects)
 		. = hearers(vision_range, targets_from) - src
 	icon = 'icons/fallout/mobs/nightkin_cloaked.dmi'
 	icon_state = "nightkin_jailer_cloak"
 
-/mob/living/simple_animal/hostile/nightkin/LoseTarget()
-	if(target = null)
+/mob/living/simple_animal/hostile/nightkin/LoseTarget() //When enemy gone, uncloak
+	target == null
 	icon = 'icons/fallout/mobs/nightkin.dmi'
 	icon_state = "nightkin_jailer_s"
 
-/mob/living/simple_animal/hostile/nightkin/death(gibbed)
+/mob/living/simple_animal/hostile/nightkin/death(gibbed)// when we die uncloak 
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'
 	icon_state = "nightkin_jailer_s"
 	anchored = FALSE

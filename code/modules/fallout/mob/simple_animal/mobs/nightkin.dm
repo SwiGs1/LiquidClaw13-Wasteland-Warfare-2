@@ -5,7 +5,7 @@
 	icon = 'icons/fallout/mobs/nightkin.dmi'
 	icon_state = "nightkin_jailer_s"
 	icon_living = "nightkin_jailer_s"
-	icon_dead = "nightkin_jailer_dead"
+	icon_dead = "nightkin_jailer_s"
 	speak_chance = 10
 	speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 	speak_emote = list("shouts", "yells")
@@ -43,6 +43,6 @@
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'
-	icon_state = icon_dead
+	icon_state = "nightkin_jailer_s"
 	anchored = FALSE
 	..()

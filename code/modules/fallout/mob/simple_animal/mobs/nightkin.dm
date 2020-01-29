@@ -35,11 +35,9 @@
 	icon_state = "nightkin_jailer_cloak"
 
 /mob/living/simple_animal/hostile/nightkin/LoseTarget()
-	target = null
+	if(target = null)
 	icon = 'icons/fallout/mobs/nightkin.dmi'
 	icon_state = "nightkin_jailer_s"
-	walk(src, 0)
-	LoseAggro()
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'

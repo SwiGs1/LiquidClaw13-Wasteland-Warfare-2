@@ -32,11 +32,22 @@
 	if(!search_objects)
 		. = hearers(vision_range, targets_from) - src
 	icon_state = "nightkin_jailer_cloak"
+	visible_message("<span class='danger'>\The [src] cloaks and vanishes!</span>")
 
 /mob/living/simple_animal/hostile/nightkin/LoseTarget() //When enemy gone, uncloak
 	target = null
 	walk(src, 0)
 	icon_state = "nightkin_jailer_s"
+
+/mob/living/simple_animal/hostile/nightkin/bullet_act(obj/item/projectile/Proj)
+	if(!Proj)
+		return
+	if(prob(85) || Proj.damage > 26)
+		return ..()
+	else
+		visible_message("<span class='danger'>\The [Proj] is deflected harmlessly by \the [src]'s thick skin!</span>")
+		return FALSE
+
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)// when we die uncloak 
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'

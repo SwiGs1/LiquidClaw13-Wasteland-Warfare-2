@@ -82,8 +82,8 @@
 		visible_message("<span class='danger'>\ [src] shouts and growls at each other before dying as one...</span>")
 	..()
 
-/mob/living/simple_animal/hostile/nightkin/master
-	name = "nightkin"
+/mob/living/simple_animal/hostile/nightkin/nightkinmaster
+	name = "nightkin master"
 	desc = "A nightkin master, an elite sub-type of super mutant, usually the apex nightkin in the pack they travel with. Their gray-blue skin is a result of of their use of Stealth Boys."
 	icon = 'icons/fallout/mobs/nightkin.dmi'
 	icon_state = "nightkin_master_s"
@@ -111,17 +111,17 @@
 	attacktext = "Punches with spiked fist"
 	attack_sound = "punch"
 
-/mob/living/simple_animal/hostile/nightkin/master/ListTargets() //when we see enemy, we cloak 
+/mob/living/simple_animal/hostile/nightkinmaster/ListTargets() //when we see enemy, we cloak 
 	if(!search_objects)
 		. = hearers(vision_range, targets_from) - src
 	icon_state = "nightkin_master_cloak"
 
-/mob/living/simple_animal/hostile/nightkin/LoseTarget() //When enemy gone, uncloak
+/mob/living/simple_animal/hostile/nightkinmaster/LoseTarget() //When enemy gone, uncloak
 	target = null
 	walk(src, 0)
 	icon_state = "nightkin_master_s"
 
-/mob/living/simple_animal/hostile/nightkin/master/bullet_act(obj/item/projectile/Proj)
+/mob/living/simple_animal/hostile/nightkin/nightkinmaster/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
 	if(prob(85) || Proj.damage > 26)
@@ -131,7 +131,7 @@
 		return FALSE
 
 
-/mob/living/simple_animal/hostile/nightkin/master/death(gibbed)// when we die uncloak 
+/mob/living/simple_animal/hostile/nightkin/nightkinmaster/death(gibbed)// when we die uncloak 
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'
 	icon_state = icon_dead
 	anchored = FALSE

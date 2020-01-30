@@ -31,7 +31,6 @@
 /mob/living/simple_animal/hostile/nightkin/ListTargets() //when we see enemy, we cloak 
 	if(!search_objects)
 		. = hearers(vision_range, targets_from) - src
-	icon = 'icons/fallout/mobs/nightkin_cloaked.dmi'
 	icon_state = "nightkin_jailer_cloak"
 
 /mob/living/simple_animal/hostile/nightkin/LoseTarget() //When enemy gone, uncloak
@@ -39,7 +38,6 @@
 	icon_state = "nightkin_jailer_s"
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)// when we die uncloak 
-	LoseTarget()
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'
 	icon_state = icon_dead
 	anchored = FALSE

@@ -35,11 +35,12 @@
 	icon_state = "nightkin_jailer_cloak"
 
 /mob/living/simple_animal/hostile/nightkin/LoseTarget() //When enemy gone, uncloak
-	target == null
+	target = null
 	icon = 'icons/fallout/mobs/nightkin.dmi'
 	icon_state = "nightkin_jailer_s"
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)// when we die uncloak 
+	LoseTarget()
 	icon = 'icons/fallout/mobs/nightkin_dead.dmi'
 	icon_state = "nightkin_jailer_s"
 	anchored = FALSE

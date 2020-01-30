@@ -35,6 +35,7 @@
 
 /mob/living/simple_animal/hostile/nightkin/LoseTarget() //When enemy gone, uncloak
 	target = null
+	walk(src, 0)
 	icon_state = "nightkin_jailer_s"
 
 /mob/living/simple_animal/hostile/nightkin/death(gibbed)// when we die uncloak 

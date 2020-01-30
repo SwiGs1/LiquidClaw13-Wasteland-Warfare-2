@@ -41,3 +41,4 @@ Contents:
 		toggle_stealth()
 	else
 		to_chat(affecting, "<span class='danger'>Stealth does not appear to work!</span>")
+

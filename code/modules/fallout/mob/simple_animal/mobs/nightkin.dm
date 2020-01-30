@@ -111,12 +111,12 @@
 	attacktext = "Punches with spiked fist"
 	attack_sound = "punch"
 
-/mob/living/simple_animal/hostile/nightkinmaster/ListTargets() //when we see enemy, we cloak 
+/mob/living/simple_animal/hostile/nightkin/nightkinmaster/ListTargets() //when we see enemy, we cloak 
 	if(!search_objects)
 		. = hearers(vision_range, targets_from) - src
 	icon_state = "nightkin_master_cloak"
 
-/mob/living/simple_animal/hostile/nightkinmaster/LoseTarget() //When enemy gone, uncloak
+/mob/living/simple_animal/hostile/nightkin/nightkinmaster/LoseTarget() //When enemy gone, uncloak
 	target = null
 	walk(src, 0)
 	icon_state = "nightkin_master_s"

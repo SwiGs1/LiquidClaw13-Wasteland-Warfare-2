@@ -160,6 +160,20 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/energy/laser/laserrcw
+	name = "Laser RCW"
+	desc = "The unique feature of this laser assault rifle that not only gives the weapon its name, but also its unique look and high rate of fire for a laser rifle is the addition of a drum. "
+	icon_state = "laser-rcw"
+	item_state = "rcw"
+	burst_size = 4
+	fire_delay = 2
+	spread = 5
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
+	cell_type = /obj/item/stock_parts/cell/ammo/ecp
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+
 /obj/item/gun/energy/laser/pistol
 	name = "AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light."

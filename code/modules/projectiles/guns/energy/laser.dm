@@ -168,7 +168,7 @@
 	burst_size = 4
 	fire_delay = 2
 	spread = 5
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
+	ammo_type = list(/obj/item/projectile/beam/laser/rcw)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY

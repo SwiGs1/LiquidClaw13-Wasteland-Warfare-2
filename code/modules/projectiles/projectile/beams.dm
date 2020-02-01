@@ -188,13 +188,18 @@
 	damage = 35
 	armour_penetration = 0
 
+/obj/item/projectile/beam/laser/rcw
+	name = "laser beam"
+	damage = 30
+	armour_penetration = 5 
+
 /obj/item/projectile/beam/laser/wattz1000
 	name= "laser beam"
 	damage = 22
 
 /obj/item/projectile/beam/laser/wattzmagneto
 	name= "laser beam"
-	damage = 28
+	damage = 25
 
 /obj/item/projectile/beam/laser/pistol
 	name = "laser beam"

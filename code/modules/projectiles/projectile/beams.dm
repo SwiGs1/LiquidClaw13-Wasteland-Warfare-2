@@ -190,6 +190,10 @@
 
 /obj/item/projectile/beam/laser/wattz1000
 	name= "laser beam"
+	damage = 22
+
+/obj/item/projectile/beam/laser/wattzmagneto
+	name= "laser beam"
 	damage = 28
 
 /obj/item/projectile/beam/laser/pistol

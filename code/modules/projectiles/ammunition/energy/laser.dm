@@ -84,3 +84,8 @@
 	projectile_type = /obj/item/projectile/beam/laser/lasgun
 	e_cost = 50
 	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
+
+/obj/item/ammo_casing/energy/laser/wattz1000
+	projectile_type = /obj/item/projectile/beam/laser/wattz1000
+	e_cost = 15 
+	fire_sound = 'sound/f13weapons/wattz1000.ogg'

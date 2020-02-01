@@ -173,7 +173,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
-
 /obj/item/gun/energy/laser/pistol
 	name = "AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light."
@@ -182,6 +181,18 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 2
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/gun/energy/laser/wattz1000
+	name = "Wattz 1000 laser pistol"
+	desc = "A Wattz 1000 laser pistol. As the pistol is a civilian model, the wattage is lower than military or police versions."\
+	icon_state = "wattz1000"
+	item_state = "wattz"
+	w_class = WEIGHT_CLASS_NORMAL 
+	weapon_weight = WEAPON_LIGHT
+	fire_delay = 1 
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/wattz1000)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
 

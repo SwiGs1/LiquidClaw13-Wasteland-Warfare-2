@@ -165,7 +165,7 @@
 	desc = "The unique feature of this laser assault rifle that not only gives the weapon its name, but also its unique look and high rate of fire for a laser rifle is the addition of a drum. "
 	icon_state = "laser-rcw"
 	item_state = "rcw"
-	burst_size = 4
+	burst_size = 3
 	fire_delay = 2
 	spread = 5
 	ammo_type = list(/obj/item/projectile/beam/laser/rcw)

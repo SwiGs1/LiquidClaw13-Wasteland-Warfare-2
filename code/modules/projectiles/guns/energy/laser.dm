@@ -168,7 +168,7 @@
 	burst_size = 3
 	fire_delay = 2
 	spread = 5
-	ammo_type = list(/obj/item/projectile/beam/laser/rcw)
+	ammo_type = list(/obj/item/projectile/beam/laserrcw)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -189,9 +189,9 @@
 	desc = "A Wattz 1000 laser pistol. As the pistol is a civilian model, the wattage is lower than military or police versions."
 	icon_state = "wattz1000"
 	item_state = "wattz"
-	w_class = WEIGHT_CLASS_NORMAL 
+	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
-	fire_delay = 1 
+	fire_delay = 1
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/wattz1000)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	slot_flags = ITEM_SLOT_BELT
@@ -201,7 +201,7 @@
 	desc = "This Wattz 1000 laser pistol has been upgraded with a magnetic field targeting system that tightens the laser emission, giving this pistol extra penetrating power."
 	icon_state = "magnetowattz"
 	item_state = "wattz"
-	w_class = WEIGHT_CLASS_NORMAL 
+	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/wattzmagneto)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec

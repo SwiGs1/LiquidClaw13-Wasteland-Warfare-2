@@ -84,3 +84,18 @@
 	projectile_type = /obj/item/projectile/beam/laser/lasgun
 	e_cost = 50
 	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
+
+/obj/item/ammo_casing/energy/laser/rcw
+	projectile_type = /obj/item/projectile/beam/laser/rcw
+	e_cost = 60
+	fire_sound = 'sound/f13weapons/rcw.ogg'
+
+/obj/item/ammo_casing/energy/laser/wattz1000
+	projectile_type = /obj/item/projectile/beam/laser/wattz1000
+	e_cost = 15 
+	fire_sound = 'sound/f13weapons/wattz1000.ogg'
+
+/obj/item/ammo_casing/energy/laser/wattzmagneto
+	projectile_type = /obj/item/projectile/beam/laser/wattzmagneto
+	e_cost = 20
+	fire_sound = 'sound/f13weapons/wattz1000_magneto.ogg'

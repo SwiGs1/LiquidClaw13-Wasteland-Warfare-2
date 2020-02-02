@@ -85,7 +85,7 @@
 	e_cost = 50
 	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
 
-/obj/item/ammo_casing/energy/laser/rcw
+/obj/item/ammo_casing/energy/laser/laserrcw
 	projectile_type = /obj/item/projectile/beam/laser/laserrcw
 	e_cost = 60
 	fire_sound = 'sound/f13weapons/rcw.ogg'

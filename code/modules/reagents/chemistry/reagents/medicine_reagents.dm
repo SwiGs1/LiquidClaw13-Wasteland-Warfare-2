@@ -1443,7 +1443,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	color = "#6D6374"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 20
-	addiction_threshold = 1 //good luck
+	addiction_threshold = 6
 
 /datum/reagent/medicine/medx/on_mob_add(mob/living/carbon/human/M)
 	..()

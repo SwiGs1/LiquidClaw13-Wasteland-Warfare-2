@@ -4,9 +4,9 @@
 	name = "feral dog"
 	desc = "The dogs that survived the Great War are a larger, and tougher breed, size of a wolf.<br>This one seems to be severely malnourished and its eyes are bloody red."
 	icon = 'icons/fallout/mobs/animal.dmi'
-	icon_state = "dog_angry"
-	icon_living = "dog_angry"
-	icon_dead = "dog_dead"
+	icon_state = "feral_angry"
+	icon_living = "feral_angry"
+	icon_dead = "fearl_dead"
 	icon_gib = "gib"
 	turns_per_move = 1
 	response_help = "pets"

@@ -1730,6 +1730,7 @@
 #include "code\modules\hydroponics\grown\onion.dm"
 #include "code\modules\hydroponics\grown\pineapple.dm"
 #include "code\modules\hydroponics\grown\potato.dm"
+#include "code\modules\hydroponics\grown\prickly_pear.dm"
 #include "code\modules\hydroponics\grown\pumpkin.dm"
 #include "code\modules\hydroponics\grown\rainbow_bunch.dm"
 #include "code\modules\hydroponics\grown\random.dm"

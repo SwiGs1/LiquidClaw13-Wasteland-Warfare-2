@@ -75,3 +75,10 @@
 	icon_state = "wild_yucca"
 	desc = "The banana yucca plant produces the soft, tasty banana yucca fruits."
 	produce = /obj/item/reagent_containers/food/snacks/grown/yucca
+
+
+/obj/structure/flora/wasteplant/wild_prickly
+	name = "wild prickly pear"
+	icon_state = "wild_prickly"
+	desc = "This paddle-shaped cactus bears a juicy, pear shaped fruit."
+	produce = /obj/item/reagent_containers/food/snacks/grown/prickly

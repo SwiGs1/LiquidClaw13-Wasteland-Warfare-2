@@ -1,16 +1,16 @@
 /obj/item/stealthboy
 	name = "Steath Boy"
-    desc = "The RobCo Stealth Boy 3001 is a personal stealth device worn on one's wrist. It generates a modulating field that transmits the reflected light from one side of an object to the other, making a person much harder to notice (but not completely invisible)."
+	desc = "The RobCo Stealth Boy 3001 is a personal stealth device worn on one's wrist. It generates a modulating field that transmits the reflected light from one side of an object to the other, making a person much harder to notice (but not completely invisible)."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "stealthboy"
-    item_flags = NOBLUDGEON
+	item_flags = NOBLUDGEON
 	slot_flags = ITEM_SLOT_BELT
-    throwforce = 5
+	throwforce = 5
 	throw_speed = 3
 	throw_range = 5
-    w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_SMALL
 
-    var/mob/living/carbon/human/user = null
+	var/mob/living/carbon/human/user = null
 	var/charge = 300
 	var/max_charge = 300
 	var/on = FALSE
@@ -58,5 +58,5 @@
 	var/turf/T = get_turf(src)
 	if(on)
 		if(charge > 0)
-        	Deactivate()
-		    return
+		Deactivate()
+

@@ -55,9 +55,7 @@
 	if(user.get_item_by_slot(SLOT_BELT) != src)
 		Deactivate()
 		return
-	var/turf/T = get_turf(src)
 	if(on)
 		animate(user,alpha = CLAMP(255 - charge,0,255),time = 10)
-	if(on)
-	charge = 0 
+	if(charge = 0)
 		animate(user,alpha = CLAMP(255 + charge,0,255),time = 10)

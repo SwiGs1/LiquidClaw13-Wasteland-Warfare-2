@@ -72,8 +72,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 	mob/living/carbon/human/user = null
-	charge = 200
-	max_charge = 200
+	charge = 300
+	max_charge = 300
 	on = FALSE
 	old_alpha = 0
 	actions_types = list(/datum/action/item_action/stealthboy_cloak)

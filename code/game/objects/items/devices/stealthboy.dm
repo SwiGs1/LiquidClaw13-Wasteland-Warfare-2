@@ -9,29 +9,39 @@
 	throw_speed = 3
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
-	var/stealth = FALSE
+	var/can_use = 1
+	var/obj/effect/temp_visual/stealthboy/stealth = null
+	var/saved_appearance = null
 
-/obj/item/stealthboy/proc/stealth()
-    var/mob/living/carbon/human/U = affecting
-		if(!U)
+/obj/item/stealthboy/New()
+	..()	
+	var/obj/effect/temp_visual/stealthboy
+	saved_appearance = initial(appearance)
+
+/obj/item/stealthboy/dropped()
+	..()
+	disrupt()
+
+/obj/item/stealthboy/equipped()
+	..()
+	disrupt()
+
+/obj/item/stealthboy/proc/check_sprite(atom/target)
+	if(target.icon_state in icon_states(target.icon))
+		return TRUE
+	return FALSE
+
+/obj/item/stealthboy/proc/toggle(mob/user)
+	if(!can_use || !saved_appearance)
 		return
-		if(stealth)
-		cancel_stealth()
-		else
-	stealth = !stealth
-	animate(U, alpha = 50,time = 15)
-	U.visible_message("<span class='warning'>[U.name] vanishes into thin air!</span>", \
-						"<span class='notice'>You are now mostly invisible to normal detection.</span>")
-
-
-/obj/item/stealthboy/proc/cancel_stealth()
-	var/mob/living/carbon/human/U = affecting
-	if(!U)
-		return 0
 	if(stealth)
-		stealth = !stealth
-		animate(U, alpha = 255, time = 15)
-		U.visible_message("<span class='warning'>[U.name] appears from thin air!</span>", \
-						"<span class='notice'>You are now visible.</span>")
-		return 1
-	return 0
+		eject_all()
+		stealth = null
+		to_chat(user, "<span class='notice'>You deactivate \the [src].</span>")
+	else
+		C.activate(user, saved_appearance, src)
+		to_chat(user, "<span class='notice'>You activate \the [src].</span>")
+
+/obj/effect/dummy/chameleon/Destroy()
+	master.disrupt(0)
+	return ..()

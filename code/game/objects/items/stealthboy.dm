@@ -50,13 +50,3 @@
 	..()
 	if(user && user.get_item_by_slot(SLOT_BELT) != src)
 		Deactivate()
-
-/obj/item/stealthboy/process()
-	if(user.get_item_by_slot(SLOT_BELT) != src)
-		Deactivate()
-		return
-	var/turf/T = get_turf(src)
-	if(on)
-		if(charge > 0)
-		Deactivate()
-

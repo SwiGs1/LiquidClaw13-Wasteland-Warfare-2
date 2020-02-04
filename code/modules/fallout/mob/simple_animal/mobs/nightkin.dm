@@ -27,6 +27,7 @@
 	anchored = TRUE //unpullable
 	attacktext = "slashes"
 	attack_sound = "punch"
+	loot = list(/obj/item/stealthboy/malfuctioning)
 
 /mob/living/simple_animal/hostile/nightkin/ListTargets() //when we see enemy, we cloak 
 	if(!search_objects)
@@ -110,6 +111,7 @@
 	anchored = TRUE //unpullable
 	attacktext = "Punches with spiked fist"
 	attack_sound = "punch"
+	loot = list(/obj/item/stealthboy)
 
 /mob/living/simple_animal/hostile/nightkin/nightkinmaster/ListTargets() //when we see enemy, we cloak 
 	if(!search_objects)

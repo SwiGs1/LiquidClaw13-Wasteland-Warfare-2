@@ -41,7 +41,3 @@
 	else
 		C.activate(user, saved_appearance, src)
 		to_chat(user, "<span class='notice'>You activate \the [src].</span>")
-
-/obj/effect/dummy/chameleon/Destroy()
-	master.disrupt(0)
-	return ..()

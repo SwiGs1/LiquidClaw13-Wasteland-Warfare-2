@@ -71,11 +71,11 @@
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 
-	var/mob/living/carbon/human/user = null
-	var/charge = 200
-	var/max_charge = 200
-	var/on = FALSE
-	var/old_alpha = 0
+	mob/living/carbon/human/user = null
+	charge = 200
+	max_charge = 200
+	on = FALSE
+	old_alpha = 0
 	actions_types = list(/datum/action/item_action/stealthboy_cloak)
 
 /obj/item/stealthboy/malfuctioning/ui_action_click(mob/user)
@@ -90,7 +90,7 @@
 	if(slot == SLOT_BELT)
 		return 1
 
-/obj/item/stealthboy/malfuctioning/proc/Activate(mob/living/carbon/human/user)
+/obj/item/stealthboy/malfuctioning/Activate(mob/living/carbon/human/user)
 	if(!user)
 		return
 	to_chat(user, "<span class='notice'>You activate \The [src].</span>")
@@ -99,7 +99,7 @@
 	old_alpha = user.alpha
 	on = TRUE
 
-/obj/item/stealthboy/malfuctioning/proc/Deactivate()
+/obj/item/stealthboy/malfuctioning/Deactivate()
 	to_chat(user, "<span class='notice'>You deactivate \The [src].</span>")
 	STOP_PROCESSING(SSobj, src)
 	if(user)

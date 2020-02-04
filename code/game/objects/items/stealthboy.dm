@@ -11,8 +11,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 	var/mob/living/carbon/human/user = null
-	var/charge = 300
-	var/max_charge = 300
+	var/charge = 350
+	var/max_charge = 350
 	var/on = FALSE
 	var/old_alpha = 0
 	actions_types = list(/datum/action/item_action/stealthboy_cloak)
@@ -50,3 +50,14 @@
 	..()
 	if(user && user.get_item_by_slot(SLOT_BELT) != src)
 		Deactivate()
+
+/obj/item/stealthboy/process()
+	if(user.get_item_by_slot(SLOT_BELT) != src)
+		Deactivate()
+		return
+	var/turf/T = get_turf(src)
+	if(on)
+		animate(user,alpha = CLAMP(255 - charge,0,255),time = 10)
+	if(on)
+	charge = 0 
+		animate(user,alpha = CLAMP(255 + charge,0,255),time = 10)

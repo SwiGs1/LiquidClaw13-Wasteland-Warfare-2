@@ -421,4 +421,11 @@
 	icon_state = "yucca"
 	icon = 'icons/fallout/objects/food&drinks/grown.dmi'
 	filling_color = "#FF6347"
+
+/obj/item/reagent_containers/food/snacks/grown/prickly
+	seed = /obj/item/seeds/prickly
+	name = "prickly pear"
+	desc = "A prickly pear is a pear-shaped fruit full of juice that tastes similar to watermelon."
+	icon_state = "prickly"
+	filling_color = "#FF6347"
 */

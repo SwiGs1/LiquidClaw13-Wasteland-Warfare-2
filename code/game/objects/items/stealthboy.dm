@@ -57,6 +57,4 @@
 		return
 	if(on)
 		animate(user,alpha = CLAMP(255 - charge,0,255),time = 10)
-	if(charge == 0)
 		charge = max(0,charge - 5)
-		animate(user,alpha = CLAMP(255 + charge,0,255),time = 10)

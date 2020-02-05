@@ -1,3 +1,5 @@
+//Legion Mongrel Directory - Swigs
+
 /mob/living/simple_animal/hostile/commanded/mongrel
 	name = "Legion mongrel"
 	desc = "Legion mongrels are dogs owned and bred by the Houndmasters of Caesar's Legion. Mongrels are mainly used in combat and scouting missions by the Legion"
@@ -62,4 +64,4 @@
 			playsound(src, pick('sound/f13npc/dog_alert1.ogg', 'sound/f13npc/dog_alert2.ogg', 'sound/f13npc/dog_alert3.ogg'), 50, 0)
 	else
 		if(prob(5))
-			emote("me",1,pick(emote_see)
+			emote("me",1,pick(emote_see))

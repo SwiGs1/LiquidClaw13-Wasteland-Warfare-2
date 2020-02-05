@@ -210,6 +210,11 @@
 /obj/effect/temp_visual/small_smoke/halfsecond
 	duration = 5
 
+/obj/effect/temp_visual/stealthboy
+	icon = 'icons/mob/human.dmi'
+	icon_state = "body_cloaked"
+	duration = 650
+
 /obj/effect/temp_visual/fire
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "3"

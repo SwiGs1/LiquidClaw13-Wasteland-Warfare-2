@@ -412,3 +412,4 @@
 				. = 0
 /mob/living/simple_animal/hostile/wolf/ncrguardog/AIShouldSleep(var/list/possible_targets)
 	return !FindTarget(possible_targets, 1)
+

@@ -8,8 +8,8 @@
 	icon_living = "dog"
 	icon_dead = "dog_dead"
 
-	health = 150
-	maxHealth = 150
+	health = 100
+	maxHealth = 100
 
 	move_to_delay = 2
 

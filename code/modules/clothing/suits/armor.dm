@@ -303,7 +303,7 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 25, "rad" = 5, "fire" = 50, "acid" = 10)
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/raider/sadist
@@ -318,7 +318,7 @@
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	flash_protect = 2
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 25, "bio" = 20, "rad" = 0, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
@@ -326,7 +326,7 @@
 	icon_state = "yankee"
 	item_state = "yankee"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 	strip_delay = 40
 
 /obj/item/clothing/suit/armor/f13/badlands
@@ -342,7 +342,7 @@
 	icon_state = "painspike"
 	item_state = "painspike"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
+	armor = list("melee" = 45, "bullet" = 25, "laser" = 15, "energy" = 10, "bomb" = 16, "bio" = 20, "rad" = 0, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/leatherarmor
 	name = "leather armor"
@@ -350,7 +350,7 @@
 	icon_state = "leatherarmor"
 	item_state = "leatherarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 35, "bullet" = 15, "laser" = 30, "energy" = 20, "bomb" = 0, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	armor = list("melee" = 35, "bullet" = 15, "laser" = 40, "energy" = 30, "bomb" = 0, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 
@@ -360,7 +360,7 @@
 	icon_state = "insect_armor"
 	item_state = "insect_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 55, "bullet" = 30, "laser" = 25, "energy" = 25, "bomb" = 25, "bio" = 70, "rad" = 65, "fire" = 80, "acid" = 100)
+	armor = list("melee" = 45, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 60, "rad" = 55, "fire" = 80, "acid" = 30)
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 
@@ -370,7 +370,7 @@
 	icon_state = "bmetalarmor"
 	item_state = "bmetalarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 90, "acid" = 0)
+	armor = list("melee" = 60, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 90, "acid" = 0)
 	slowdown = 0.75
 	strip_delay = 60
 

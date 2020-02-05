@@ -699,7 +699,7 @@
 				/obj/item/stack/sheet/bone = 2)
 	category = CAT_PRIMAL
 	subcategory = CAT_TRIBAL
-*/ 
+*/
 /datum/crafting_recipe/boneaxe
 	name = "Bone Axe"
 	result = /obj/item/twohanded/fireaxe/boneaxe
@@ -1089,7 +1089,7 @@
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/salvagedpaconversion2
 	name = "Salvaged Power Armor"
@@ -1098,7 +1098,7 @@
 				/obj/item/toy/crayon/spraycan)
 	time = 30
 	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/suppressor
 	name = "Suppressor"

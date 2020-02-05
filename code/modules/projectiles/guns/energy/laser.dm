@@ -163,7 +163,7 @@
 /obj/item/gun/energy/laser/rcw
 	name = "Laser RCW"
 	desc = "The unique feature of this laser assault rifle that not only gives the weapon its name, but also its unique look and high rate of fire for a laser rifle is the addition of a drum. "
-	icon_state = "laserrcw"
+	icon_state = "laser-rcw"
 	item_state = "rcw"
 	burst_size = 3
 	fire_delay = 1
@@ -210,6 +210,7 @@
 /obj/item/gun/energy/laser/scatter
 	name = "tribeam laser rifle"
 	desc = "A modified AER9 equipped with a refraction kit that spreads its bolts. It is usually only given to high-ranking soldiers within the Brotherhood, due to it's level of technology, as well as its reputation of friendly fire."
+	icon_state = "tribeam"
 	item_state = "laser-rifle9"
 	fire_delay = 3
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)

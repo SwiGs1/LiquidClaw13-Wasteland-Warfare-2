@@ -15,7 +15,6 @@
 	move_to_delay = 1.5
 
 	density = 1
-	self_weight = 200
 
 	attacktext = "swatted"
 	melee_damage_lower = 50

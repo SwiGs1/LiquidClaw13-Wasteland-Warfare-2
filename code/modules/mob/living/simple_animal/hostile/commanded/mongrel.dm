@@ -12,7 +12,6 @@
 	maxHealth = 125
 	move_to_delay = 1
 	density = 1
-	self_weight = 40
 	response_help  = "pets"
 	response_disarm = "shoves"
 	response_harm   = "kicks"

@@ -7,7 +7,7 @@
 	tools = list(TOOL_SWORKBENCH)
 	time = 120
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/metalarmormk2
 	name = "metal armor mark 2"
@@ -18,7 +18,7 @@
 	tools = list(TOOL_SWORKBENCH)
 	time = 120
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/metalmask
 	name = "metal mask"
@@ -29,7 +29,7 @@
 	tools = list(TOOL_SWORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/metalmaskmk2
 	name = "metal mask mk2"
@@ -39,7 +39,7 @@
 	tools = list(TOOL_SWORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/leatherarmor
 	name = "leather armor"
@@ -49,7 +49,7 @@
 	tools = list(TOOL_BWORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/armorkit
 	name = "armor kit"
@@ -60,7 +60,7 @@
 	tools = list(TOOL_BWORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 /*
 /datum/crafting_recipe/durathread_vest
 	name = "Makeshift Vest"
@@ -69,7 +69,7 @@
 				/obj/item/stack/sheet/leather = 4)
 	time = 50
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/durathread_helmet
 	name = "Makeshift Helmet"
@@ -78,7 +78,7 @@
 				/obj/item/stack/sheet/leather = 5)
 	time = 40
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 */
 /datum/crafting_recipe/fannypack
 	name = "Fannypack"
@@ -87,7 +87,7 @@
 				/obj/item/stack/sheet/leather = 1)
 	time = 20
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_BELTS
 
 	/datum/crafting_recipe/bandolier
 	name = "Bandolier"
@@ -180,7 +180,7 @@
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	time = 120
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 
 
 /datum/crafting_recipe/Imetalarmor
@@ -193,7 +193,7 @@
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	time = 120
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 
 /datum/crafting_recipe/IImetalarmor
 	name = "upgrading metal armor"
@@ -204,7 +204,7 @@
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	time = 120
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
 */
 
 /datum/crafting_recipe/wanderer
@@ -375,4 +375,4 @@
 				/obj/item/stack/sheet/hay = 3)
 	time = 10
 	category = CAT_CLOTHING
-	subcategory = CAT_CLOTHING
+	subcategory = CAT_ARMOUR

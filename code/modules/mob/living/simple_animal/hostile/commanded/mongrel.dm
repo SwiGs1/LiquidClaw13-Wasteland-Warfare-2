@@ -3,6 +3,7 @@
 /mob/living/simple_animal/hostile/commanded/mongrel
 	name = "Legion mongrel"
 	desc = "Legion mongrels are dogs owned and bred by the Houndmasters of Caesar's Legion. Mongrels are mainly used in combat and scouting missions by the Legion"
+
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "mongrel"
 	icon_living = "mongrel"
@@ -15,8 +16,6 @@
 	response_help  = "pets"
 	response_disarm = "shoves"
 	response_harm   = "kicks"
-	healable = 1
-	stat_attack = UNCONSCIOUS
 	speak = list("Grrr", "Woof!", "Bark!", "Hooow!")
 	speak_emote = list("barks", "woofs")
 	emote_hear = list("barks!", "woofs!", "yaps.","pants.", "growls.", "growls.")
@@ -26,14 +25,12 @@
 	faction = list("Legion")
 	faction_enemy = list("hostile","NCR","BOS")
 	see_in_dark = 5
-	speed = 1
 	speak_chance = 1
 	turns_per_move = 10
 	attacktext = "bites"
 	melee_damage_lower = 20
 	melee_damage_upper = 35
 	attack_sound = 'sound/weapons/bite.ogg'
-	retribution = 1
 	death_sound = 'sound/f13npc/dog_death.ogg'
 	butcher_results = list(/obj/item/stack/sheet/animalhide/wolf = 1, \
 	/obj/item/reagent_containers/food/snacks/meat/slab/wolf = 1)

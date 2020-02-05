@@ -236,7 +236,7 @@
 	unacsessable()
 
 /mob/living/simple_animal/hostile/commanded/proc/enemy_command(var/mob/speaker,var/text)
-	for(var/F in human_factions)
+	for(var/F in var/human_factions)
 		if(parse_phrase(text, lowertext_uni(F)))
 			faction_enemy += F
 			faction -= F
@@ -250,7 +250,7 @@
 	unacsessable()
 	return 0
 /mob/living/simple_animal/hostile/commanded/proc/friend_command(var/mob/speaker,var/text)
-	for(var/F in human_factions)
+	for(var/F in var/human_factions)
 		if(parse_phrase(text, lowertext_uni(F)))
 			faction_enemy -= F
 			faction += F

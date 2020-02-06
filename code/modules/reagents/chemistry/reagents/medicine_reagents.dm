@@ -1740,22 +1740,10 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	reagent_state = SOLID
 	overdose_threshold = 40
 
-/datum/reagent/medicine/cateye/on_mob_add(mob/M)
-	..()
-	if(isliving(M))
-		var/mob/living/carbon/L = M
-		L.add_trait(TRAIT_NIGHT_VISION, id)
-
-/datum/reagent/medicine/cateye/on_mob_delete(mob/M)
-	if(isliving(M))
-		var/mob/living/carbon/L = M
-		L.remove_trait(TRAIT_NIGHT_VISION, id)
-	..()
-
 /datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
 	if(isliving(M))
-		var/mob/living/carbon/L = M
 		M.add_trait(TRAIT_NIGHT_VISION, id)
+		M.darkness_view = 128
 		to_chat(M, "<span class='danger'>You start to see more clearly in the dark.</span>")
 
 /datum/reagent/medicine/cateye/overdose_process(mob/living/M)

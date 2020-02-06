@@ -354,6 +354,24 @@
 	flags_inv = HIDEJUMPSUIT
 	strip_delay = 40
 
+/obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
+	name = "reinforced leather armor"
+	desc = "A set of armor made from brahmin leather, reinforced with both extra leather and some metal plating."
+	icon_state = "leatherarmor_reinforced"
+	item_state = "leatherarmor_reinforced"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list("melee" = 45, "bullet" = 25, "laser" = 30, "energy" = 25, "bomb" = 10, "bio" = 50, "rad" = 20, "fire" = 85, "acid" = 20)
+	strip_delay = 45
+
+/obj/item/clothing/suit/armor/f13/leatherarmor/light
+	name = "light leather armor"
+	desc = "A set of even lighter armor made from brahmin leather. The leg pieces have been cut away and the rest of the armour has been reinforced with extra leather."
+	icon_state = "leatherarmor"
+	item_state = "leatherarmor"
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 50, "energy" = 35, "bomb" = 0, "bio" = 45, "rad" = 10, "fire" = 70, "acid" = 0)
+	strip_delay = 25
+
 /obj/item/clothing/suit/armor/f13/chitinarmor
 	name = "insect chitin armor"
 	desc = "A set of light armor made of insect chitin.<br> Tough and light, it provides some moderate protection from trauma while allowing the user to remain mobile and protected from the elements."

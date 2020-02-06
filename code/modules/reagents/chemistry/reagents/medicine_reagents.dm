@@ -1735,20 +1735,33 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	name = "Cateye Powder"
 	id = "cateye"
 	description = "A powerful drug that gives the ability to see clearly in dark enviroments."
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	color = "#C8A5DC"
 	reagent_state = SOLID
 	overdose_threshold = 40
-	addiction_threshold = 35
+
+/datum/reagent/medicine/cateye/on_mob_add(mob/M)
+	..()
+	if(isliving(M))
+		var/mob/living/carbon/L = M
+		L.add_trait(TRAIT_NIGHT_VISION, id)
+
+/datum/reagent/medicine/cateye/on_mob_delete(mob/M)
+	if(isliving(M))
+		var/mob/living/carbon/L = M
+		L.remove_trait(TRAIT_NIGHT_VISION, id)
+	..()
 
 /datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
-	M.adjustOxyLoss(-3*REM, 0)
-	var/obj/item/organ/eyes/eyes = M.getorganslot(ORGAN_SLOT_EYES)
-	if (!eyes)
-		return
-	if(M.has_trait(TRAIT_NIGHT_VISION))
-		if(prob(20))
-			to_chat(M, "<span class='warning'>Your vision in the dark slowly increases...area</span>")
-			M.cure_blind(EYE_DAMAGE)
-			M.cure_nearsighted(EYE_DAMAGE)
-	..()
-	. = 1
+	if(isliving(M))
+		var/mob/living/carbon/L = M
+		M.add_trait(TRAIT_NIGHT_VISION, id)
+		to_chat(M, "<span class='danger'>You start to see more clearly in the dark.</span>")
+
+/datum/reagent/medicine/cateye/overdose_process(mob/living/M)
+	if(prob(33))
+		M.adjustBrainLoss(2*REM)
+		. = 1
+		M.blur_eyes(35)
+		M.Dizzy(4)
+		to_chat(M, "<span class='danger'>Your vision blurs and you feel dizzy, you shouldn't take so much cateye at once.</span>")

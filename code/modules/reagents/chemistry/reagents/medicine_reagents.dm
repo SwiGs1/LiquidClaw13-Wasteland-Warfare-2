@@ -1730,3 +1730,26 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	M.adjustToxLoss(4*REM, 0) 
 	..()
 	. = 1
+
+/datum/reagent/medicine/mentat
+	name = "Cateye Powder"
+	id = "cateye"
+	description = "A powerful drug that gives the ability to see clearly in dark enviroments."
+	color = "#C8A5DC"
+	reagent_state = SOLID
+	overdose_threshold = 40
+	addiction_threshold = 35
+
+/datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
+M.adjustOxyLoss(-3*REM, 0)
+	var/obj/item/organ/eyes/eyes = M.getorganslot(ORGAN_SLOT_EYES)
+	if (!eyes)
+		return
+	if(M.has_trait(TRAIT_NIGHT_VISION))
+		if(prob(20))
+			to_chat(M, "<span class='warning'>Your vision in the dark slowly increases...area</span>")
+			M.cure_blind(EYE_DAMAGE)
+			M.cure_nearsighted(EYE_DAMAGE)
+	..()
+	. = 1
+	

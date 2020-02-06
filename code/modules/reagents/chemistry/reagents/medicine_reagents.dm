@@ -1727,11 +1727,11 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	. = 1
 
 /datum/reagent/medicine/antivenom/overdose_process(mob/living/M)
-	M.adjustToxLoss(4*REM, 0) 
+	M.adjustToxLoss(4*REM, 0)
 	..()
 	. = 1
 
-/datum/reagent/medicine/mentat
+/datum/reagent/medicine/cateye
 	name = "Cateye Powder"
 	id = "cateye"
 	description = "A powerful drug that gives the ability to see clearly in dark enviroments."
@@ -1741,7 +1741,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	addiction_threshold = 35
 
 /datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
-M.adjustOxyLoss(-3*REM, 0)
+	M.adjustOxyLoss(-3*REM, 0)
 	var/obj/item/organ/eyes/eyes = M.getorganslot(ORGAN_SLOT_EYES)
 	if (!eyes)
 		return
@@ -1752,4 +1752,3 @@ M.adjustOxyLoss(-3*REM, 0)
 			M.cure_nearsighted(EYE_DAMAGE)
 	..()
 	. = 1
-	

@@ -182,7 +182,7 @@
 	icon_state = "pill18"
 	list_reagents = list("radx" = 20)
 
-/obj/item/reagent_containers/pill/mentat
+/obj/item/reagent_containers/pill/cateye
 	name = "Cateye"
 	desc = "A pill that increasing the ability for your eyes to see in dark enviroments"
 	icon_state = "pill21"

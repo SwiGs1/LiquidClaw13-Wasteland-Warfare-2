@@ -1746,8 +1746,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	if (!eyes)
 		return
 	if(M.has_trait(TRAIT_NIGHT_VISION))
-		darkness_view = 128
-		lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
+		see_in_dark = 4
 		to_chat(M, "<span class='danger'>You start to see more clearly in the dark.</span>")
 
 /datum/reagent/medicine/cateye/overdose_process(mob/living/M)

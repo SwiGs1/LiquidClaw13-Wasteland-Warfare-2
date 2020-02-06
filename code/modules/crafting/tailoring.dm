@@ -51,6 +51,17 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOUR
 
+/datum/crafting_recipe/leatherarmor_reinforced
+	name = "reinforced leather armour"
+	result = /obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
+	reqs = list(/obj/item/clothing/suit/armor/f13/leatherarmor = 1,
+				/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/sheet/metal = 2)
+	tools = list(TOOL_BWORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
+
 /datum/crafting_recipe/armorkit
 	name = "armor kit"
 	result = /obj/item/clothing/suit/armor/f13/kit

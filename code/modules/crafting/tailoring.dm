@@ -57,7 +57,7 @@
 	reqs = list(/obj/item/clothing/suit/armor/f13/leatherarmor = 1,
 				/obj/item/stack/sheet/leather = 3,
 				/obj/item/stack/sheet/metal = 2)
-	tools = list(TOOL_BWORKBENCH)
+	tools = list(TOOL_SWORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOUR

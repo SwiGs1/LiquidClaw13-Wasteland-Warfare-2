@@ -286,4 +286,4 @@
 
 /obj/item/storage/pill_bottle/chem_tin/cateyesmall/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/reagent_containers/pill/cateyesmall(src)
+		new /obj/item/reagent_containers/pill/cateye(src)

@@ -1745,7 +1745,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	M.add_trait(TRAIT_NIGHT_VISION)
 	if (!eyes)
 		return
-	if M.add_trait(TRAIT_NIGHT_VISION, id)
+	if(M.has_trait(TRAIT_NIGHT_VISION))
 		night_vision = TRUE
 		to_chat(M, "<span class='danger'>You start to see more clearly in the dark.</span>")
 

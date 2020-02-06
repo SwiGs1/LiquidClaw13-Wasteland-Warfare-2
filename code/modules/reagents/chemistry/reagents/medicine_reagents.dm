@@ -1741,10 +1741,11 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	overdose_threshold = 40
 
 /datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
-	if(isliving(M))
-		M.add_trait(TRAIT_NIGHT_VISION, id)
-		M.darkness_view = 128
-		to_chat(M, "<span class='danger'>You start to see more clearly in the dark.</span>")
+	var/obj/item/organ/eyes/night_vision = M.getorganslot(ORGAN_SLOT_EYES)
+	if (!eyes)
+		return
+	M.add_trait(TRAIT_NIGHT_VISION, id)
+	to_chat(M, "<span class='danger'>You start to see more clearly in the dark.</span>")
 
 /datum/reagent/medicine/cateye/overdose_process(mob/living/M)
 	if(prob(33))

@@ -1735,18 +1735,19 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	name = "Cateye Powder"
 	id = "cateye"
 	description = "A powerful drug that gives the ability to see clearly in dark enviroments."
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	color = "#C8A5DC"
 	reagent_state = SOLID
 	overdose_threshold = 40
 
 /datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
 	var/obj/item/organ/eyes/eyes = M.getorganslot(ORGAN_SLOT_EYES)
-	M.add_trait(TRAIT_NIGHT_VISION)
 	if (!eyes)
 		return
 	if(M.has_trait(TRAIT_NIGHT_VISION))
-		see_in_dark = 4
+		add_trait(TRAIT_NIGHT_VISION, "night_vision")
+		update_body()
+	add_trait(TRAIT_NIGHT_VISION, source)
+	var/lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 		to_chat(M, "<span class='danger'>You start to see more clearly in the dark.</span>")
 
 /datum/reagent/medicine/cateye/overdose_process(mob/living/M)

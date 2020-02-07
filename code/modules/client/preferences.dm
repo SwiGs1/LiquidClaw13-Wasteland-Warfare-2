@@ -597,7 +597,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Play Mojave Radio:</b> <a href='?_src_=prefs;preference=hear_radio'>[(wasteland_toggles & SOUND_RADIO) ? "Enabled":"Disabled"]</a><br>"
 			dat += "<b>Play Lobby Music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Enabled":"Disabled"]</a><br>"
 			dat += "<b>See Pull Requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Enabled":"Disabled"]</a><br>"
-			dat += "<b>Allow Lewd Verbs:</b> <a href='?_src_=prefs;preference=verb_consent'>[(wasteland_toggles & VERB_CONSENT) ? "Yes":"No"]</a><br>"
+			//dat += "<b>Allow Lewd Verbs:</b> <a href='?_src_=prefs;preference=verb_consent'>[(wasteland_toggles & VERB_CONSENT) ? "Yes":"No"]</a><br>"
 
 			dat += "<br>"
 

@@ -1,4 +1,4 @@
-/datum/interaction/lewd/kiss
+/*/datum/interaction/lewd/kiss
 	command = "deepkiss"
 	description = "Kiss them deeply."
 	require_user_mouth = TRUE
@@ -315,4 +315,4 @@
 	write_log_target = "was made to suck nuts by"
 
 /datum/interaction/lewd/nuts/display_interaction(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target)
-	user.nut_face(target)
+	user.nut_face(target)*/

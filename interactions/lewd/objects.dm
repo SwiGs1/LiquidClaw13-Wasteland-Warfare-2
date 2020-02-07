@@ -1,4 +1,4 @@
-/obj/item/dildo
+/*/obj/item/dildo
 	name = "dildo"
 	desc = "Hmmm, deal throw."
 	icon = 'honk/icons/obj/items/dildo.dmi'
@@ -153,4 +153,4 @@
 
 /obj/item/pneumatic_cannon/dildo/Initialize()
 	. = ..()
-	allowed_typecache = dildo_typecache
+	allowed_typecache = dildo_typecache*/

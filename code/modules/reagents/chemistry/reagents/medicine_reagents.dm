@@ -1741,13 +1741,11 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 
 /datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
 	var/obj/item/organ/eyes/eyes = M.getorganslot(ORGAN_SLOT_EYES)
+	var/lighting_alpha
 	if (!eyes)
 		return
-	if(M.has_trait(TRAIT_NIGHT_VISION))
-		add_trait(TRAIT_NIGHT_VISION, "night_vision")
-		update_body()
-	add_trait(TRAIT_NIGHT_VISION, source)
-	var/lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
+	if(M.has_trait(TRAIT_NIGHT_VISION && !lighting_alpha))
+			lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 		to_chat(M, "<span class='danger'>You start to see more clearly in the dark.</span>")
 
 /datum/reagent/medicine/cateye/overdose_process(mob/living/M)

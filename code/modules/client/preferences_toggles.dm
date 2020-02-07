@@ -267,7 +267,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, listen_ooc)()
 /datum/verbs/menu/Settings/listen_ooc/Get_checked(client/C)
 	return C.prefs.chat_toggles & CHAT_OOC
 
-TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, verb_consent)()
+/*TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, verb_consent)()
 	set name = "Toggle Lewd Verbs"
 	set category = "Preferences"
 	set desc = "Allow Lewd Verbs"
@@ -284,7 +284,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, verb_consent)()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Allow Lewd Verbs", "[usr.client.prefs.wasteland_toggles & VERB_CONSENT ? "Yes" : "No"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/verbs/menu/Settings/verb_consent/Get_checked(client/C)
-	return C.prefs.wasteland_toggles & VERB_CONSENT
+	return C.prefs.wasteland_toggles & VERB_CONSENT*/
 
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, listen_looc)()

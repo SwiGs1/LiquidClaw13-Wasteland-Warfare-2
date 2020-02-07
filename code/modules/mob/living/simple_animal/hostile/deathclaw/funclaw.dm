@@ -1,4 +1,4 @@
-#define CUM_TARGET_THROAT_FUNCLAW "throat"
+/*#define CUM_TARGET_THROAT_FUNCLAW "throat"
 #define CUM_TARGET_VAGINA_FUNCLAW "vagina"
 #define CUM_TARGET_ANUS_FUNCLAW "anus"
 
@@ -134,5 +134,5 @@
 		visible_message("<span class='danger'>\The [src]</b> tears off \the [M]'s clothes!</span>", \
 				"<span class='userdanger'>\The [src]</b> tears off \the [M]'s clothes!</span>", null, COMBAT_MESSAGE_RANGE)
 		return TRUE
-	return FALSE
+	return FALSE */
 

@@ -597,6 +597,7 @@
 	hat_offset = 3
 
 //SexBot module begin
+/*
 /obj/item/robot_module/fisto_protectron
 	name = "Fisto"
 	basic_modules = list(
@@ -624,7 +625,7 @@
 /obj/item/reagent_containers/spray/sexborg_oil
 	name = "oil spray"
 	list_reagents = list("cooking_oil" = 250)
-
+*/
 //module end
 
 

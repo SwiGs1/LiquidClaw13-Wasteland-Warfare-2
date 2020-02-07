@@ -1,4 +1,4 @@
-#define CUM_TARGET_MOUTH "mouth"
+/*#define CUM_TARGET_MOUTH "mouth"
 #define CUM_TARGET_THROAT "throat"
 #define CUM_TARGET_VAGINA "vagina"
 #define CUM_TARGET_ANUS "anus"
@@ -662,4 +662,4 @@
 	if(lust >= lust_tolerance)
 		cum(partner, orifice)
 	else
-		moan()
+		moan()*/

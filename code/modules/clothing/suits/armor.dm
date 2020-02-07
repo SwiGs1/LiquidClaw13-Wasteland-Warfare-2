@@ -398,8 +398,9 @@
 	icon_state = "metalarmor_reinforced"
 	item_state = "metalarmor_reinforced"
 	armor = list("melee" = 75, "bullet" = 55, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 45, "rad" = 40, "fire" = 80, "acid" = 15)
-	slowdown = 0.85
-	strip_delay = 80
+	slowdown = 1.10
+	strip_delay = 150
+	item_flags = SLOWS_WHILE_IN_HAND
 
 /obj/item/clothing/suit/armor/f13/bmetalarmor/light
 	name = "light metal armor"

@@ -62,3 +62,9 @@
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
 	list_reagents = list("healing_poultice" = 10)
 	icon_state = "bandaid_healingpoultice"
+
+/obj/item/reagent_containers/pill/patch/steady
+	name = "Steady"
+	desc = "A combat chem that increases your awareness of your surroundings and calms and slows your body down allowing you to move quicker and see further"
+	list_reagents = list("steady" = 5)
+	icon_state = "bandaid_steady"

@@ -1731,7 +1731,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	..()
 	. = 1
 
-/datum/reagent/medicine/cateye
+/*/datum/reagent/medicine/cateye
 	name = "Cateye Powder"
 	id = "cateye"
 	description = "A powerful drug that gives the ability to see clearly in dark enviroments."
@@ -1748,8 +1748,6 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	..()
 
 /datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
-	M.lighting_alpha = LIGHTING_PLANE_ALPHA_LOWLIGHT_VISION
-	M.see_in_dark = 6
 
 /datum/reagent/medicine/cateye/overdose_process(mob/living/M)
 	if(prob(33))
@@ -1757,4 +1755,4 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		. = 1
 		M.blur_eyes(35)
 		M.Dizzy(4)
-		to_chat(M, "<span class='danger'>Your vision blurs and you feel dizzy, you shouldn't take so much cateye at once.</span>")
+		to_chat(M, "<span class='danger'>Your vision blurs and you feel dizzy, you shouldn't take so much cateye at once.</span>")*/

@@ -56,8 +56,20 @@
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
 	reqs = list(/obj/item/clothing/suit/armor/f13/leatherarmor = 1,
 				/obj/item/stack/sheet/leather = 3,
-				/obj/item/stack/sheet/metal = 2)
+				/obj/item/stack/sheet/metal = 2,
+				/obj/item/stack/crafting/metalparts = 1)
 	tools = list(TOOL_SWORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOUR
+
+/datum/crafting_recipe/leatherarmor_light
+	name = "light leather armour"
+	result = /obj/item/clothing/suit/armor/f13/leatherarmor/light
+	reqs = list(/obj/item/clothing/suit/armor/f13/leatherarmor = 1,
+				/obj/item/stack/sheet/leather = 5)
+	tools = list(TOOL_SWORKBENCH,
+				 TOOL_WIRECUTTER)
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOUR

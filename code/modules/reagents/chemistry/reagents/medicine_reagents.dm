@@ -1777,7 +1777,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	metabolization_rate = 3 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
-/datum/reagen/medicine/hydra /on_mob_add(mob/M)
+/datum/reagen/medicine/hydra/on_mob_add(mob/M)
 	..()
 	if(isliving(M))
 		var/mob/living/L = M
@@ -1796,6 +1796,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		M.adjustBruteLoss(-4*REM)
 		M.adjustOxyLoss(-2*REM)
 	..()
+	. = 1
 
 /datum/reagent/medicine/hydra/overdose_process(mob/living/M)
 	if(prob(40))

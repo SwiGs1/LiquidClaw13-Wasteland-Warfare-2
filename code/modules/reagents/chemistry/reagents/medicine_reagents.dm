@@ -1739,15 +1739,26 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	reagent_state = SOLID
 	overdose_threshold = 40
 
-/datum/reagent/medicine/cateye/on_mob_add(mob/living/M)
+/datum/reagent/drug/steady/on_mob_add(mob/M)
 	..()
-	M.add_trait(TRAIT_NIGHT_VISION, id)
+	if(isliving(M))
+		var/mob/living/L = M
+		L.add_trait(TRAIT_NIGHT_VISION, id)
+		L.lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 
-/datum/reagent/medicine/cateye/on_mob_delete(mob/living/M)
-	M.remove_trait(TRAIT_NIGHT_VISION, id)
-	..()
+
+/datum/reagent/drug/steady/on_mob_delete(mob/M)
+	if(isliving(M))
+		var/mob/living/L = M
+		L.add_trait(TRAIT_NIGHT_VISION, id)
+		L.lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 
 /datum/reagent/medicine/cateye/on_mob_life(mob/living/carbon/M)
+	var/high_message = pick("You start to see more clearly", "This is why they call it cateye", "darkness feels like daytime")
+	if(prob(5))
+		to_chat(M, "<span class='notice'>[high_message]</span>")
+	..()
+	. = 1
 
 /datum/reagent/medicine/cateye/overdose_process(mob/living/M)
 	if(prob(33))

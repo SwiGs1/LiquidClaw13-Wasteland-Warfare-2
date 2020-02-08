@@ -594,26 +594,22 @@
 	description = "A combat drug made from unknown chemicals, increases your awareness of your surroundings and calms and slows your body down allowing you to move quicker and see further. Due to the potency and untested nature of the drug, however, it is also highly addictive, making it highly toxic to the brain and body."
 	reagent_state = LIQUID
 	color = "#FAFAFA"
-	overdose_threshold = 30
+	overdose_threshold = 22
 	addiction_threshold = 15
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
-	var/zoomed = FALSE //Zoom toggle
-	var/zoom_amt = 3 //Distance in TURFs to move the user's screen forward (the "zoom" effect)
-	var/zoom_out_amt = 0
 
 /datum/reagent/drug/steady/on_mob_add(mob/M)
 	..()
 	if(isliving(M))
 		var/mob/living/L = M
-		L.add_trait(TRAIT_GOTTAGOFAST, TRAIT_SELF_AWARE, id)
-		zoomed = TRUE
-		zoom_amt = 6
-		zoom_out_amt = 9
+		L.add_trait(TRAIT_GOTTAGOFAST, id)
+		L.add_trait(TRAIT_SELF_AWARE, id)
 
 /datum/reagent/drug/steady/on_mob_delete(mob/M)
 	if(isliving(M))
 		var/mob/living/L = M
-		L.remove_trait(TRAIT_GOTTAGOFAST, TRAIT_SELF_AWARE,  id)
+		L.remove_trait(TRAIT_GOTTAGOFAST, id)
+		L.add_trait(TRAIT_SELF_AWARE, id)
 	..()
 
 /datum/reagent/drug/steady/on_mob_life(mob/living/carbon/M)
@@ -648,5 +644,82 @@
 	M.adjustBrainLoss(3*REM)
 	M.adjustToxLoss(5*REM, 0)
 	M.adjustBruteLoss(5*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/drug/rebound
+	name = "Rebound Fluid"
+	id = "rebound"
+	description = "Rebound, a concoction of liquid Jet and an adrenaline. Causing a steady rush of energy rather than an instant energy rush."
+	reagent_state = LIQUID
+	color = "#FAFAFA"
+	overdose_threshold = 35
+	addiction_threshold = 20
+	metabolization_rate = 2 * REAGENTS_METABOLISM
+
+/datum/reagent/drug/rebound/on_mob_life(mob/living/carbon/M)
+	M.set_drugginess(20)
+	if(isturf(M.loc) && !isspaceturf(M.loc))
+		if(M.canmove)
+			if(prob(10))
+				step(M, pick(GLOB.cardinals))
+	if(prob(12))
+		M.emote(pick("twitch","drool","moan","giggle"))
+	if(M.health < 0)
+		M.adjustToxLoss(-0.5*REM, 0)
+		M.adjustBruteLoss(-0.5*REM, 0)
+		M.adjustFireLoss(-0.5*REM, 0)
+	if(M.oxyloss > 35)
+		M.setOxyLoss(35, 0)
+	if(M.losebreath >= 4)
+		M.losebreath -= 2
+	if(M.losebreath < 0)
+		M.losebreath = 0
+	M.adjustStaminaLoss(-0.5*REM, 0)
+	. = 1
+	if(prob(20))
+		M.AdjustStun(-20, 0)
+		M.AdjustKnockdown(-20, 0)
+		M.AdjustUnconscious(-20, 0)
+	..()
+
+
+/datum/reagent/drug/rebound/overdose_start(mob/living/M)
+	to_chat(M, "<span class='userdanger'>You start tripping hard!</span>")
+	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "[id]_overdose", /datum/mood_event/drugs/overdose, name)
+
+/datum/reagent/drug/rebound/overdose_process(mob/living/M)
+	if(M.hallucination < volume && prob(20))
+		M.hallucination += 5
+		M.adjustToxLoss(0.5, 0)
+	..()
+
+/datum/reagent/drug/rebound/addiction_act_stage1(mob/living/M)
+	if(prob(20))
+		M.emote(pick("twitch","drool","moan"))
+	..()
+
+/datum/reagent/drug/rebound/addiction_act_stage2(mob/living/M)
+	M.Dizzy(5)
+	if(prob(30))
+		M.emote(pick("twitch","drool","moan"))
+	..()
+
+/datum/reagent/drug/rebound/addiction_act_stage3(mob/living/M)
+	if(M.canmove && !ismovableatom(M.loc))
+		for(var/i = 0, i < 4, i++)
+			step(M, pick(GLOB.cardinals))
+	M.Dizzy(10)
+	if(prob(40))
+		M.emote(pick("twitch","drool","moan"))
+	..()
+
+/datum/reagent/drug/rebound/addiction_act_stage4(mob/living/carbon/human/M)
+	if(M.canmove && !ismovableatom(M.loc))
+		for(var/i = 0, i < 8, i++)
+			step(M, pick(GLOB.cardinals))
+	M.Dizzy(15)
+	if(prob(50))
+		M.emote(pick("twitch","drool","moan"))
 	..()
 	. = 1

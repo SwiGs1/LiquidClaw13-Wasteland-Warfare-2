@@ -197,3 +197,11 @@
 	volume = 10
 	amount_per_transfer_from_this = 10
 	list_reagents = list("psycho" = 10)
+
+/obj/item/reagent_containers/hypospray/medipen/rebound
+	name = "Rebound"
+	desc = "Contains rebound, a concoction of liquid Jet and an adrenaline. Causing a steady rush of energy rather than an instant energy rush."
+	icon_state = "reboundpen"
+	volume = 10
+	amount_per_transfer_from_this = 10
+	list_reagents = list("rebound" = 10)

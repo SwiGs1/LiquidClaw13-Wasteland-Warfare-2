@@ -212,4 +212,4 @@
 	icon_state = "hydrapen"
 	volume = 15
 	amount_per_transfer_from_this = 15
-	list_reagents = list("rebound" = 15)
+	list_reagents = list("hydra" = 15)

@@ -1768,7 +1768,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		M.Dizzy(4)
 		to_chat(M, "<span class='danger'>Your vision blurs and you feel dizzy, you shouldn't take so much cateye at once.</span>")*/
 
-/datum/reagent/medicine/hydra 
+/datum/reagent/medicine/hydra
 	name = "Hydra Fluid"
 	id = "hydra"
 	description = "Developed from antivenom by the legion. By combining cave fungus with antivenom, developing hydra - a curative agent which both anesthetizes and restores crippled limbs over time and gives resistance to heat."
@@ -1777,7 +1777,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	metabolization_rate = 3 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
-/datum/reagen/medicine/hydra/on_mob_add(mob/M)
+/datum/reagent/medicine/hydra/on_mob_add(mob/M)
 	..()
 	if(isliving(M))
 		var/mob/living/L = M
@@ -1788,15 +1788,15 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	if(isliving(M))
 		var/mob/living/L = M
 		L.remove_trait(TRAIT_STUNIMMUNE, id)
-		L.add_trait(TRAIT_RESISTHEAT, id)
+		L.remove_trait(TRAIT_RESISTHEAT, id)
 	..()
 
 /datum/reagent/medicine/hydra/on_mob_life(mob/living/M)
 		M.adjustFireLoss(-4*REM)
 		M.adjustBruteLoss(-4*REM)
 		M.adjustOxyLoss(-2*REM)
-	..()
-	. = 1
+		..()
+		. = 1
 
 /datum/reagent/medicine/hydra/overdose_process(mob/living/M)
 	if(prob(40))
@@ -1806,5 +1806,31 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		M.losebreath += 8
 		M.set_disgust(12)
 		M.adjustStaminaLoss(30)
-		M.vomit(0, 1, 1, 1, 0, 0, 0, 1)
+		M.blur_eyes(35)
+		M.Jitter(2)
 		to_chat(M, "<span class='danger'>Too much hydra will fuck you up. Welcome to a world of pain</span>")
+
+/datum/reagent/medicine/addictol
+	name = "Addictol Inhalant"
+	id = "addictol"
+	description = "Addictol removes addiction to chems fully at the cost of much more servere side effects. Due to the inhalent unknown contents nature, does toxin and oxygen damage. What a shit design"
+	reagent_state = SOLID
+	color = "#C8A5DC"
+
+/datum/reagent/medicine/addictol/on_mob_life(mob/living/carbon/M)
+	for(var/datum/reagent/R in M.reagents.reagent_list)
+		if(R != src)
+			M.reagents.remove_reagent(R.id,2)
+	for(var/datum/reagent/R in M.reagents.addiction_list)
+		M.reagents.addiction_list.Remove(R)
+		to_chat(M, "<span class='notice'>You feel like you've gotten over your need for [R.name].</span>")
+	M.confused = max(M.confused, 4)
+	if(ishuman(M) && prob(5))
+		var/mob/living/carbon/human/H = M
+		H.vomit(10)
+		H.Dizzy(4)
+		H.Jitter(4)
+		H.adjustToxLoss(4*REM, 0)
+		H.adjustOxyLoss(4*REM, 0)
+	..()
+	. = 1

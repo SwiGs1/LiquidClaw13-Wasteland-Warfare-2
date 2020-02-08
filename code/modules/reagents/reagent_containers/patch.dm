@@ -65,6 +65,12 @@
 
 /obj/item/reagent_containers/pill/patch/steady
 	name = "Steady"
-	desc = "A combat chem that increases your awareness of your surroundings and calms and slows your body down allowing you to move quicker and see further"
+	desc = "A combat chem that increases your awareness of your surroundings and calms and slows your body down allowing you to move quicker."
 	list_reagents = list("steady" = 5)
 	icon_state = "bandaid_steady"
+
+/obj/item/reagent_containers/pill/patch/addictol
+	name = "Addictol"
+	desc = "A lesser alternative to dealing with chem addiction. Removes addictions at the cost of some hefty side effects, as well as toxin and oxygen damage, due to the inhalents addiction removing properties "
+	list_reagents = list("addictol" = 10)
+	icon_state = "bandaid_addictol"

@@ -205,3 +205,11 @@
 	volume = 10
 	amount_per_transfer_from_this = 10
 	list_reagents = list("rebound" = 10)
+
+/obj/item/reagent_containers/hypospray/medipen/hydra
+	name = "Hydra"
+	desc = "Developed from antivenom by the legion. By combining cave fungus with antivenom, developing hydra - a curative agent which both anesthetizes and restores crippled limbs over time and gives resistance to heat."
+	icon_state = "hydrapen"
+	volume = 15
+	amount_per_transfer_from_this = 15
+	list_reagents = list("rebound" = 15)

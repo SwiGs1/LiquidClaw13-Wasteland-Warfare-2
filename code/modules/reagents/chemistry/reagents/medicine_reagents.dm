@@ -1767,3 +1767,43 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		M.blur_eyes(35)
 		M.Dizzy(4)
 		to_chat(M, "<span class='danger'>Your vision blurs and you feel dizzy, you shouldn't take so much cateye at once.</span>")*/
+
+/datum/reagent/medicine/hydra 
+	name = "Hydra Fluid"
+	id = "hydra"
+	description = "Developed from antivenom by the legion. By combining cave fungus with antivenom, developing hydra - a curative agent which both anesthetizes and restores crippled limbs over time and gives resistance to heat."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	metabolization_rate = 3 * REAGENTS_METABOLISM
+	overdose_threshold = 30
+
+/datum/reagen/medicine/hydra /on_mob_add(mob/M)
+	..()
+	if(isliving(M))
+		var/mob/living/L = M
+		L.add_trait(TRAIT_STUNIMMUNE, id)
+		L.add_trait(TRAIT_RESISTHEAT, id)
+
+/datum/reagent/medicine/hydra/on_mob_delete(mob/M)
+	if(isliving(M))
+		var/mob/living/L = M
+		L.remove_trait(TRAIT_STUNIMMUNE, id)
+		L.add_trait(TRAIT_RESISTHEAT, id)
+	..()
+
+/datum/reagent/medicine/hydra/on_mob_life(mob/living/M)
+		M.adjustFireLoss(-4*REM)
+		M.adjustBruteLoss(-4*REM)
+		M.adjustOxyLoss(-2*REM)
+	..()
+
+/datum/reagent/medicine/hydra/overdose_process(mob/living/M)
+	if(prob(40))
+		M.confused +=30
+		M.blur_eyes(30)
+		M.adjustToxLoss(9*REM, 0)
+		M.losebreath += 8
+		M.set_disgust(12)
+		M.adjustStaminaLoss(30)
+		M.vomit(0, 1, 1, 1, 0, 0, 0, 1)
+		to_chat(M, "<span class='danger'>Too much hydra will fuck you up. Welcome to a world of pain</span>")

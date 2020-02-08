@@ -655,7 +655,7 @@
 	color = "#FAFAFA"
 	overdose_threshold = 35
 	addiction_threshold = 20
-	metabolization_rate = 2 * REAGENTS_METABOLISM
+	metabolization_rate = 4.5 * REAGENTS_METABOLISM
 
 /datum/reagent/drug/rebound/on_mob_life(mob/living/carbon/M)
 	M.set_drugginess(20)

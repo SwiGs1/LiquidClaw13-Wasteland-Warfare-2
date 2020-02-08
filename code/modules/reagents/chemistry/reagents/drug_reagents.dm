@@ -606,6 +606,9 @@
 	if(isliving(M))
 		var/mob/living/L = M
 		L.add_trait(TRAIT_GOTTAGOFAST, TRAIT_SELF_AWARE, id)
+		zoomed = TRUE
+		zoom_amt = 6
+		zoom_out_amt = 9
 
 /datum/reagent/drug/steady/on_mob_delete(mob/M)
 	if(isliving(M))
@@ -615,9 +618,6 @@
 
 /datum/reagent/drug/steady/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("You feel calmer", "You feel still as a rock", "movement feels faster with more precision")
-	zoomed = TRUE
-	zoom_amt = 6
-	zoom_out_amt = 9
 	if(prob(5))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
 	..()

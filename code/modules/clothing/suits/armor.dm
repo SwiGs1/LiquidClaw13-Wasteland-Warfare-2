@@ -370,6 +370,7 @@
 	item_state = "leatherarmor_light"
 	body_parts_covered = CHEST|GROIN|ARMS
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 55, "energy" = 40, "bomb" = 0, "bio" = 45, "rad" = 10, "fire" = 70, "acid" = 0)
+	flags_inv = NONE
 	strip_delay = 25
 
 /obj/item/clothing/suit/armor/f13/chitinarmor
@@ -385,8 +386,8 @@
 /obj/item/clothing/suit/armor/f13/bmetalarmor
 	name = "metal armor"
 	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks heavy and impairs movement"
-	icon_state = "bmetalarmor"
-	item_state = "bmetalarmor"
+	icon_state = "metalarmor"
+	item_state = "metalarmor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 25, "bio" = 30, "rad" = 30, "fire" = 65, "acid" = 0)
 	slowdown = 0.75

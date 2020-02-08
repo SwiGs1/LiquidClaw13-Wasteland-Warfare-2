@@ -1795,6 +1795,7 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 		M.adjustFireLoss(-4*REM)
 		M.adjustBruteLoss(-4*REM)
 		M.adjustOxyLoss(-2*REM)
+		to_chat(M, "<span class='notice'>Your body parts feel stronger!</span>")
 		..()
 		. = 1
 

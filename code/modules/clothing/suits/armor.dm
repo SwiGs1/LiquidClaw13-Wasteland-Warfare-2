@@ -373,16 +373,6 @@
 	flags_inv = NONE
 	strip_delay = 25
 
-/obj/item/clothing/suit/armor/f13/chitinarmor
-	name = "insect chitin armor"
-	desc = "A set of light armor made of insect chitin.<br> Tough and light, it provides some moderate protection from trauma while allowing the user to remain mobile and protected from the elements."
-	icon_state = "insect_armor"
-	item_state = "insect_armor"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 45, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 60, "rad" = 55, "fire" = 80, "acid" = 30)
-	flags_inv = HIDEJUMPSUIT
-	strip_delay = 40
-
 /obj/item/clothing/suit/armor/f13/bmetalarmor
 	name = "metal armor"
 	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks heavy and impairs movement"

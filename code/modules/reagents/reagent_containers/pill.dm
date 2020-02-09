@@ -181,3 +181,9 @@
 	desc = "A pill that stabilizes radiation levels and treats small amounts of toxin damage."
 	icon_state = "pill18"
 	list_reagents = list("radx" = 20)
+
+/*/obj/item/reagent_containers/pill/cateye
+	name = "Cateye pill"
+	desc = "A pill that increasing the ability for your eyes to see in dark enviroments"
+	icon_state = "pill21"
+	list_reagents = list("cateye" = 10)*/

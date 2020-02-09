@@ -888,6 +888,14 @@
 	time = 50
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/hydra
+	name = "Hydra"
+	result = /obj/item/reagent_containers/hypospray/medipen/hydra
+	reqs = list(/obj/item/reagent_containers/glass/bottle/antivenom = 1,
+				/obj/item/reagent_containers/food/snacks/grown/fungus = 1 )
+	time = 70
+	category = CAT_MEDICAL
+
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak

@@ -533,7 +533,9 @@
 				/obj/item/reagent_containers/pill/stimulant,
 				/obj/item/reagent_containers/syringe/medx,
 				/obj/item/reagent_containers/hypospray/medipen/rebound,
-				/obj/item/reagent_containers/hypospray/medipen/hydra
+				/obj/item/reagent_containers/hypospray/medipen/hydra,
+				/obj/item/reagent_containers/pill/patch/addictol,
+				/obj/item/reagent_containers/pill/patch/steady
 				)
 /* ------------------------------------------------
    --------------WEAPON SPAWNERS-------------------

@@ -531,7 +531,9 @@
 				/obj/item/reagent_containers/pill/patch/turbo,
 				/obj/item/reagent_containers/pill/patch/healingpowder,
 				/obj/item/reagent_containers/pill/stimulant,
-				/obj/item/reagent_containers/syringe/medx
+				/obj/item/reagent_containers/syringe/medx,
+				/obj/item/reagent_containers/hypospray/medipen/rebound,
+				/obj/item/reagent_containers/hypospray/medipen/hydra
 				)
 /* ------------------------------------------------
    --------------WEAPON SPAWNERS-------------------
@@ -1139,17 +1141,17 @@
 	fan_out_items = TRUE
 
 	loot = list(
-				/obj/item/storage/box/ingredients/american,
+				/*/obj/item/storage/box/ingredients/american,
 				/obj/item/storage/box/ingredients/carnivore,
 				/obj/item/storage/box/ingredients/delights,
 				/obj/item/storage/box/ingredients/exotic,
-				/obj/item/storage/box/ingredients/fiesta,
+				/obj/item/storage/box/ingredients/fiesta,*/
 				/obj/item/storage/box/ingredients/fruity,
 				/obj/item/storage/box/ingredients/grains,
-				/obj/item/storage/box/ingredients/italian,
+				/*/obj/item/storage/box/ingredients/italian,
 				/obj/item/storage/box/ingredients/sweets,
 				/obj/item/storage/box/ingredients/vegetarian,
-				/obj/item/storage/box/ingredients/wildcard,
+				/obj/item/storage/box/ingredients/wildcard,*/
 				/obj/item/storage/box/donkpockets,
 				/obj/item/reagent_containers/food/condiment/flour,
 				/obj/item/reagent_containers/food/condiment/rice,
@@ -1161,7 +1163,7 @@
 				/obj/item/reagent_containers/food/condiment/mayonnaise,
 				/obj/item/reagent_containers/food/condiment/soysauce,
 				/obj/item/reagent_containers/food/snacks/beans,
-				/obj/item/reagent_containers/food/snacks/baguette,
+				/*/obj/item/reagent_containers/food/snacks/baguette,
 				/obj/item/reagent_containers/food/snacks/bun,
 				/obj/item/reagent_containers/food/snacks/butter,
 				/obj/item/reagent_containers/food/snacks/cheesewedge,
@@ -1169,19 +1171,35 @@
 				/obj/item/reagent_containers/food/snacks/chocolatebar,
 				/obj/item/reagent_containers/food/snacks/cracker,
 				/obj/item/reagent_containers/food/snacks/icecream,
-				/obj/item/reagent_containers/food/snacks/lollipop,
+				/obj/item/reagent_containers/food/snacks/lollipop,*/
 				/obj/item/reagent_containers/food/snacks/meat/rawbacon,
 				/obj/item/reagent_containers/food/snacks/meat/slab/human,
 				/obj/item/reagent_containers/food/snacks/meat/slab/pug,
 				/obj/item/reagent_containers/food/snacks/meat/slab/meatproduct,
-				/obj/item/reagent_containers/food/snacks/muffin/berry,
+				/*/obj/item/reagent_containers/food/snacks/muffin/berry,
 				/obj/item/reagent_containers/food/snacks/muffin,
 				/obj/item/reagent_containers/food/snacks/no_raisin,
 				/obj/item/reagent_containers/food/snacks/popcorn,
 				/obj/item/reagent_containers/food/snacks/raisincookie,
-				/obj/item/reagent_containers/food/snacks/sosjerky,
+				/obj/item/reagent_containers/food/snacks/sosjerky,*/
 				/obj/item/reagent_containers/food/snacks/sausage,
 				/obj/item/reagent_containers/food/snacks/store/cheesewheel,
+				/obj/item/reagent_containers/food/snacks/f13/crispysquirrel,
+				/obj/item/reagent_containers/food/snacks/f13/squirrelstick,
+				/obj/item/reagent_containers/food/snacks/f13/porknbeans,
+				/obj/item/reagent_containers/food/snacks/f13/instamash,
+				/obj/item/reagent_containers/food/snacks/f13/blamco/large,
+				/obj/item/reagent_containers/food/snacks/f13/blamco,
+				/obj/item/reagent_containers/food/snacks/f13/dandyapples,
+				/obj/item/reagent_containers/food/snacks/f13/steak,
+				/obj/item/reagent_containers/food/snacks/f13/crisps,
+				/obj/item/reagent_containers/food/snacks/f13/sugarbombs,
+				/obj/item/reagent_containers/food/snacks/f13/fancylads,
+				/obj/item/reagent_containers/food/snacks/f13/yumyum,
+				/obj/item/reagent_containers/food/snacks/f13/cram/large,
+				/obj/item/reagent_containers/food/snacks/f13/cram,
+				/obj/item/reagent_containers/food/snacks/f13/bubblegum/large,
+				/obj/item/reagent_containers/food/snacks/f13/bubblegum,
 				"" // a chance to spawn nothing
 				)
 

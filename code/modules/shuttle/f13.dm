@@ -86,7 +86,7 @@
 	icon_keyboard = "tech_key"
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/fevbunker_control
-	shuttleId = "fev_bunker_elevator"
+	shuttleId = "fevbunker_elevator"
 	possible_destinations = "fev_top;fev_bottom"
 	flags_1 = NODECONSTRUCT_1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF

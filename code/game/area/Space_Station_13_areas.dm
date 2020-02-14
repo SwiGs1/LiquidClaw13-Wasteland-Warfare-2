@@ -1442,7 +1442,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "enclave_base"
 	ambientsounds = list('sound/f13ambience/enclave_vault.ogg')
 
-/area/f13/underground/fevbunker
+/area/f13/underground/fev_bunker
 	name = "FEV Bunker"
 	icon_state = "fev_bunker"
 

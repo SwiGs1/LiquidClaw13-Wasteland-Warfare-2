@@ -1,12 +1,13 @@
-"a" = (/obj/structure/chair/f13chair2{icon_state = "f13chair2"; dir = 4},/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
+"a" = (/obj/structure/chair/f13chair2,/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
 "b" = (/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
 "c" = (/obj/machinery/computer/shuttle/northbunkerelevator,/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
-"d" = (/obj/machinery/light/small{icon_state = "bulb"; dir = 8},/obj/structure/chair/f13chair2{icon_state = "f13chair2"; dir = 4},/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
-"e" = (/obj/docking_port/mobile/elevator{dheight = 0; dir = 8; dwidth = 1; height = 3; id = "northbunker_elevator"; name = "north bunker elevator"; timid = 1; width = 4},/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
+"d" = (/obj/machinery/light/small{icon_state = "bulb"; dir = 8},/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
+"e" = (/obj/docking_port/mobile/elevator{dheight = 0; dir = 8; dwidth = 1; height = 3; id = "fevbunker_elevator"; name = "fev bunker elevator"; timid = 1; width = 4},/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
+"f" = (/obj/structure/chair/f13chair2{icon_state = "f13chair2"; dir = 1},/turf/open/floor/engine,/area/shuttle/northbunker_elevator)
 
 (1,1,1) = {"
-abc
-abb
+aac
+bbb
 dbe
-abb
+ffb
 "}

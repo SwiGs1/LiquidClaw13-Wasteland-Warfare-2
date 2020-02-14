@@ -2,7 +2,7 @@
 "b" = (/turf/open/floor/engine,/area/shuttle/fevbunker)
 "c" = (/obj/machinery/computer/shuttle/fevbunkerelevator,/turf/open/floor/engine,/area/shuttle/fevbunker)
 "d" = (/obj/machinery/light/small{icon_state = "bulb"; dir = 8},/obj/structure/chair/f13chair2{icon_state = "f13chair2"; dir = 4},/turf/open/floor/engine,/area/shuttle/fevbunker)
-"e" = (/obj/docking_port/mobile/elevator{dheight = 0; dir = 8; dwidth = 1; height = 3; id = "bunker_elevator"; name = "bunker elevator"; timid = 1; width = 4},/turf/open/floor/engine,/area/shuttle/fevbunker)
+"e" = (/obj/docking_port/mobile/elevator{id = "fevbunker_elevator"; name = "fev bunker elevator"},/turf/open/floor/engine,/area/shuttle/fevbunker)
 
 (1,1,1) = {"
 abc

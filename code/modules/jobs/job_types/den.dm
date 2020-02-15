@@ -386,6 +386,42 @@ Settler
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
 
+/datum/job/den/f13radiohost
+	title = "Radio Host"
+	flag = F13RADIOHOST
+	department_flag = DEN
+	faction = "Town"
+	total_positions = 1
+	spawn_positions = 1
+	description = "Your job is to bring the news of the Wasteland to those unfortunate enough to not be able to see it."
+	supervisors = "the sheriff and the mayor"
+	selection_color = "#dcba97"
+	exp_requirements = 180
+	exp_type = EXP_TYPE_DEN
+
+	outfit = /datum/outfit/job/den/f13radiohost
+
+/datum/outfit/job/den/f13radiohost
+	name = "Radio Host"
+	jobtype = /datum/job/den/f13radiohost
+
+	ears =  		/obj/item/radio/headset/headset_den
+	id = null
+	belt = null
+
+	uniform = /obj/item/clothing/under/f13/roving
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	backpack = /obj/item/storage/backpack/satchel/leather
+	satchel = /obj/item/storage/backpack/satchel/leather
+	l_pocket = /obj/item/storage/bag/money/small/settler
+	r_pocket = /obj/item/camera
+	head =	/obj/item/clothing/head/fedora
+	mask = /obj/item/clothing/mask/cigarette/pipe
+	backpack_contents = list(
+		/obj/item/pen,
+		/obj/item/camera_film=2,
+		/obj/item/radio/off)
+
 /datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(

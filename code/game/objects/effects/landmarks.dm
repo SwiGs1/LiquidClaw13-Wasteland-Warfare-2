@@ -638,6 +638,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/start/f13/dendoc
 	name = "Doctor"
 
+/obj/effect/landmark/start/f13/radiohost
+	name = "Radio Host"
+
 // Wasteland
 
 /obj/effect/landmark/start/f13/cultleader

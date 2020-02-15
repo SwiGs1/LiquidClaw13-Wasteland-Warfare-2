@@ -7,10 +7,14 @@
 <i>
 Don't be a dick, and <b>read the rules</b> before you play.
 
-Development is active and we are always looking for more talent, we are open source and running a ported /tg/ version of legacy F13 code.
+Development is active and we are always looking for more talent, we are open source and running a ported /tg/ version of legacy F13 code. 
+
+Feel free to contribute on the github, join the discord and forum, and if you would like to, support us on patreon so we can improve LiquidClaw13 in everyway possible. 
 
 Github: https://github.com/SwiGs1/LiquidClaw13-Wasteland-Warfare
 Discord: https://discord.gg/QVJCPE5
+Forum: http://liquidclaw13ww.boards.net
+Patreon: https://www.patreon.com/LiquidClaw13
 
 This server takes place before the Second Battle of Hoover Dam, in Nevada.
 </i>

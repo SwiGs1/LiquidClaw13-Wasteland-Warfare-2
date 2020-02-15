@@ -13,8 +13,11 @@ Format:
 	disabled (disables the map)
 endmap
 
-map pahrump
+map sunnydale
 	default
+	votable
+endmap
+map pahrump
 	votable
 endmap
 map boxstation

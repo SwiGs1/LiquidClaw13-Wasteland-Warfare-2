@@ -1442,6 +1442,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "enclave_base"
 	ambientsounds = list('sound/f13ambience/enclave_vault.ogg')
 
+/area/f13/underground/fev_bunker
+	name = "FEV Bunker"
+	icon_state = "fev_bunker"
+
 /area/f13/den
 	name = "Den"
 	icon_state = "den"
@@ -1482,6 +1486,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/shuttle/northbunker_elevator
 	name = "North Bunker Elevator"
+	flags_2 = BLOCK_RADIO_2
+
+/area/shuttle/fevbunker
+	name = "FEV Bunker Elevator"
 	flags_2 = BLOCK_RADIO_2
 
 /area/shuttle/mining_elevator

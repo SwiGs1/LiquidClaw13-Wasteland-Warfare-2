@@ -249,7 +249,7 @@ GITHUBURL https://github.com/SwiGs1/LiquidClaw13-Wasteland-Warfare
 GITHUBREPOID 138069316
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
-# BANAPPEALS http://justanotherday.example.com
+# BANAPPEALS http://liquidclaw13ww.boards.net
 
 ## System command that invokes youtube-dl, used by Play Internet Sound.
 ## You can install youtube-dl with
@@ -371,7 +371,7 @@ ALLOW_MAP_VOTING 1
 
 ## AUTOADMIN
 ## The default admin rank
-AUTOADMIN_RANK Knight
+AUTOADMIN_RANK Liquid Admin
 
 ## Uncomment to automatically give that admin rank to all players
 #AUTOADMIN

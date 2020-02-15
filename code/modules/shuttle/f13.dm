@@ -78,3 +78,15 @@
 	possible_destinations = "Mining_Ground;Mining_Level_1"
 	flags_1 = NODECONSTRUCT_1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
+/obj/machinery/computer/shuttle/fevbunkerelevator
+	name = "elevator controls"
+	desc = "Controls the elevator."
+	icon_screen = "shuttle"
+	icon_keyboard = "tech_key"
+	light_color = LIGHT_COLOR_CYAN
+	circuit = /obj/item/circuitboard/computer/fevbunker_control
+	shuttleId = "fevbunker_elevator"
+	possible_destinations = "fev_top;fev_bottom"
+	flags_1 = NODECONSTRUCT_1
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF

@@ -24,10 +24,10 @@ FEEDBACK_DATABASE liquidclaw13
 FEEDBACK_TABLEPREFIX SS13_
 
 ## Username/Login used to access the database.
-FEEDBACK_LOGIN liquidclaw
+FEEDBACK_LOGIN liquidclawuser
 
 ## Password used to access the database.
-FEEDBACK_PASSWORD NInO3iHOnix4wa73LitimIPi2ED4z8
+FEEDBACK_PASSWORD NInO3iHOnix4wa73LitimIPi2ED4z8 //not the actual password, it was just for testing pre-server hosting - Swigs
 ## Time in deciseconds for a query to execute before alerting a for possible slow query timeout.
 ## While enabled queries and their execution times are logged if they exceed this value.
 #QUERY_DEBUG_LOG_TIMEOUT 70

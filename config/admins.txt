@@ -16,3 +16,4 @@ GamingAxe115 = Personnel Manager
 saucefromwiseau = Liquid Admin  
 minegw = Liquid Admin 
 SharpenLimited = Liquid Admin
+Elephant Seal = Liquid Trialmin

@@ -841,7 +841,7 @@
 	name = "med-x"
 	result = /obj/item/reagent_containers/syringe/medx
 	time = 20
-	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/structure/flora/wasteplant/wild_agave = 1, /datum/reagent/consumable/ethanol/whiskey = 10)
+	reqs = list(/obj/item/reagent_containers/syringe = 1, /obj/item/reagent_containers/food/snacks/grown/feracactus = 2, /obj/item/reagent_containers/food/snacks/grown/agave = 1, /datum/reagent/consumable/ethanol/whiskey = 10)
 	tools = list(TOOL_SWORKBENCH)
 	category = CAT_DRUGS
 

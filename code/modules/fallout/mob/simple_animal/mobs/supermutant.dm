@@ -91,8 +91,8 @@
 	response_help = "touches"
 	response_disarm = "tries to perform a kung fu move, then suddenly remembers that it's actually"
 	response_harm = "hits"
-	maxHealth = 375
-	health = 375
+	maxHealth = 355
+	health = 355
 	force_threshold = 15
 	faction = list("hostile", "supermutant")
 	melee_damage_lower = 60

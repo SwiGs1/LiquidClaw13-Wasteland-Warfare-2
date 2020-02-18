@@ -188,6 +188,7 @@
 /mob/living/simple_animal/hostile/handy/robobrain
 	name = "robobrain"
 	desc = "Robobrains are a pre-war multi-purpose robots. Their memories and programs are stored inside an organic or partially organic brain, contained in a domed shell atop their chassis"
+	icon = 'icons/mob/robots.dmi'
 	icon_state = "robobrain"
 	icon_living = "robobrain"
 	icon_dead = "robobrain-dead"

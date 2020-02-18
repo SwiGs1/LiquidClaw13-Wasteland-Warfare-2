@@ -17,8 +17,8 @@
 	response_help = "touches"
 	response_disarm = "tries to disarm and then vanishes"
 	response_harm = "hits"
-	maxHealth = 320
-	health = 320
+	maxHealth = 305
+	health = 305
 	force_threshold = 15
 	faction = list("hostile", "supermutant")
 	melee_damage_lower = 40
@@ -101,8 +101,8 @@
 	response_help = "touches"
 	response_disarm = "tries to disarm and then vanishes"
 	response_harm = "hits"
-	maxHealth = 365
-	health = 365
+	maxHealth = 320
+	health = 320
 	force_threshold = 15
 	faction = list("hostile", "supermutant")
 	melee_damage_lower = 45

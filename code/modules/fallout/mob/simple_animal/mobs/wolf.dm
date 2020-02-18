@@ -231,7 +231,7 @@
 /mob/living/simple_animal/hostile/wolf/mongrel/AIShouldSleep(var/list/possible_targets)
 	return !FindTarget(possible_targets, 1)
 
-/mob/living/simple_animal/hostile/wolf/ncrguarddog 
+/mob/living/simple_animal/hostile/wolf/ncrguardog 
 	name = "NCR guard dog"
 	desc = "NCR guard dogs are dogs owned and bred as well as tamed by the NCR. Used for guarding, scouting and sometimes combat."
 	icon = 'icons/fallout/mobs/animal.dmi'

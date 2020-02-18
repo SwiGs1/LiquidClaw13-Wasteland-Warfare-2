@@ -5002,7 +5002,7 @@
 "bSj" = (/obj/structure/closet/cardboard,/obj/item/stack/sheet/mineral/wood/twenty,/obj/item/stack/sheet/mineral/wood/twenty,/turf/open/floor/f13/wood,/area/f13/legioncamp)
 "bSk" = (/obj/structure/destructible/tribal_torch,/turf/open/floor/plating/f13/outside/road{icon_state = "verticalleftborderleft0"},/area/f13/desert)
 "bSl" = (/obj/structure/destructible/tribal_torch,/turf/open/floor/plating/f13/outside/road{icon_state = "verticalrightborderright0"},/area/f13/desert)
-"bSm" = (/obj/item/stack/sheet/emptysandbag,/turf/open/floor/f13/wood,/area/f13/legioncamp)
+"bSm" = (/obj/item/stack/sheet/emptysandbag,/obj/structure/closet/cardboard,/turf/open/floor/f13/wood,/area/f13/legioncamp)
 "bSn" = (/obj/structure/barricade/wooden,/turf/open/floor/plating/f13/outside/road{icon_state = "outerpavement"; dir = 8},/area/f13/underground/mountain)
 "bSo" = (/obj/structure/closet/cardboard,/obj/item/shovel,/obj/item/shovel,/turf/open/floor/f13/wood,/area/f13/legioncamp)
 "bSp" = (/obj/structure/closet/cardboard,/obj/item/stack/sheet/metal/ten,/obj/item/stack/sheet/cloth/five,/obj/item/stack/sheet/cloth/five,/turf/open/floor/f13/wood,/area/f13/legioncamp)

@@ -58,6 +58,13 @@
 	item_state = "scoutclothes"
 	item_color = "scoutclothes"
 
+/obj/item/clothing/under/f13/ncr/prisoner
+	name = "NCR Prisoner Uniform"
+	desc = "The standard NCR correctional prisoner uniform."
+	icon_state = "ncr_prisoner"
+	item_state = "ncr_prisoner"
+	item_color = "ncr_prisoner"
+
 //Settlers
 
 /obj/item/clothing/under/f13/brahminm

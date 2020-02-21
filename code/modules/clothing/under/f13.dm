@@ -61,9 +61,9 @@
 /obj/item/clothing/under/f13/ncr/prisoner
 	name = "NCR Prisoner Uniform"
 	desc = "The standard NCR Correctional Facility prisoner uniform."
-	icon_state = "prisoner"	
-	item_state = "prisoner"
-	item_color = "prisoner"
+	icon_state = "ncr_prisoner"
+	item_state = "ncr_prisoner"
+	item_color = "ncr_prisoner"
 
 //Settlers
 

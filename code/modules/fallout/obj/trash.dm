@@ -26,7 +26,7 @@
 
 /obj/item/trash/f13/yumyum
 	name = "\proper empty YumYum package"
-	desc = "There was some food, now there is no food - it's a trash."
+	desc = "There was some food, now there is no food - it's trash."
 	icon_state = "yumyum"
 
 /obj/item/trash/f13/fancylads
@@ -86,7 +86,7 @@
 
 /obj/item/trash/f13/borscht
 	name = "\proper empty can of borscht"
-	desc = "You see Ivan, there was some food, now there is no food - it's a trash."
+	desc = "You see Ivan, there was some food, now there is no food - it's trash."
 	icon_state = "borscht"
 
 /obj/item/trash/f13/dog

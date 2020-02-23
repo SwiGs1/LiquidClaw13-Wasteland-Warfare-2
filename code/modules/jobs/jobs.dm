@@ -30,7 +30,8 @@ GLOBAL_LIST_INIT(den_positions, list(
 	"Settler",
 	"Deputy",
 	"Farmer",
-	"Prospector"
+	"Prospector",
+	"Radio Host"
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(

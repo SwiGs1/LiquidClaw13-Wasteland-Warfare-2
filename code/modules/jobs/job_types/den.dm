@@ -386,6 +386,10 @@ Settler
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
 
+/*
+Radio Host
+*/
+
 /datum/job/den/f13radiohost
 	title = "Radio Host"
 	flag = F13RADIOHOST

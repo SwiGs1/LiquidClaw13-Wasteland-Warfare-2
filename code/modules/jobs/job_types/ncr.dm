@@ -307,7 +307,7 @@ Trooper
 	description =  "You answer to the Sergeants or Corporals,  following the chain of command, to your commanding officer, the Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
-	exp_requirements = 300
+	exp_requirements = 330
 
 	outfit = /datum/outfit/job/ncr/f13trooper
 
@@ -344,7 +344,7 @@ Recruit
 	description = "You answer to the Sergeants or Corporals,  following the chain of command, to your commanding officer, the Captain."
 	supervisors = "Corporals and above"
 	selection_color = "#fff5cc"
-	exp_requirements = 300
+	exp_requirements = 180
 	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/ncr/f13recruit

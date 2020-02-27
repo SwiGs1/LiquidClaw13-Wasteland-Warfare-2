@@ -375,7 +375,7 @@ Prime
 	spawn_positions = 8
 	description = "You answer directly to the Prime Decanus and the Centurion, but are expected to follow orders from the Veteran Decanus as needed. You act as a loyal soldier within the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave."
 	supervisors = "Prime Decanus and up."
-	exp_requirements = 300
+	exp_requirements = 330
 
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13primelegion
 
@@ -412,7 +412,7 @@ Legionary
 	spawn_positions = 12
 	description = "You answer directly to the Recruit Decanus and the Centurion, but are expected to follow orders from the Prime and Veteran Decanii as needed. You act as a loyal soldier within the Centuria, you have the great honour of serving under Caesar in his quest to unite the scattered tribes of The Mojave."
 	supervisors = "Recruit Decanus and up."
-	exp_requirements = 300
+	exp_requirements = 180
 	exp_type = EXP_TYPE_CREW
 
 

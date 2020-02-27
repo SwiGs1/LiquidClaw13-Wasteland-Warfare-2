@@ -182,7 +182,7 @@ Prospector
 	spawn_positions = 1
 	supervisors = "the sheriff and the mayor"
 	selection_color = "#dcba97"
-	exp_requirements = 180
+	exp_requirements = 120
 	exp_type = EXP_TYPE_DEN
 
 	outfit = /datum/outfit/job/den/f13prospector
